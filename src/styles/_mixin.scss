@@ -1,0 +1,144 @@
+@mixin minGrayFont {
+  font-size: .875rem;
+  line-height: 100%;
+  color: $grey;
+}
+
+@mixin ghost {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin UINavLink($FocusColor: $primary_shade) {
+  &{
+    position: relative;
+    transition: color .3s ease;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px;
+    bottom: 0;
+    left: -10px;
+    background-color: $pink_violet;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity .3s ease;
+  }
+
+  &:focus {
+    color: $FocusColor;
+    outline: none;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  @media screen {
+    &:hover {
+      color: $primary;
+
+      &::before {
+        opacity: 0;
+      }
+    }
+  }
+
+  &:active {
+    color: $primary_shade;
+  }
+}
+
+@mixin arrowBtn($size) {
+    padding: 0;
+    padding-left: 1px;
+    border: 2px solid $primary;
+    border-radius: 32px;
+    width: $size;
+    height: $size;
+    background-color: transparent;
+    transition:
+    background-color .3s ease,
+    border-color .3s ease;
+
+    .arrow {
+      color: $primary;
+      transition: color .3s ease;
+    }
+
+    &:hover {
+      background-color: $primary;
+
+      .arrow {
+        color: $white;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      background-color: $primary_light;
+
+      .arrow {
+        color: $white;
+      }
+    }
+
+    &:active {
+      outline: none;
+      background-color: $primary_shade;
+      border-color: $primary_shade;
+
+      .arrow {
+        color: $white;
+      }
+    }
+}
+
+@mixin btnOpaque($font-weight, $offsetX, $offsetY) {
+  padding: $offsetX $offsetY;
+  border: 2px solid $primary;
+  border-radius: 10px;
+  background-color: $primary;
+  text-align: center;
+  font-weight: $font-weight;
+  font-size: 16px;
+  line-height: 100%;
+  color: $white;
+  transition:
+  background-color .3s ease,
+  border-color .3s ease;
+
+  &:focus {
+    outline: none;
+    background-color: $primary_light;
+    border-color: $primary_shade;
+  }
+
+  @media screen {
+    &:hover {
+      background-color: $primary_light;
+      border-color: $primary_light;
+    }
+  }
+
+  &:active {
+    background-color: $primary_shade;
+    border-color: $primary_shade;
+  }
+
+  &:disabled {
+    background-color: $md_grey;
+    border-color: $md_grey;
+    color: $grey;
+  }
+}
+
+@mixin btnTransparent {
+
+}

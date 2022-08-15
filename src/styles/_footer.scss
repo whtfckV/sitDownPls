@@ -1,0 +1,28 @@
+@import "grid.scss";
+@import "variables.scss";
+@import "mixin.scss";
+
+.footer {
+  position: relative;
+  padding-top: 1.5rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    height: 136px;
+    background-color: $md_grey;
+    z-index: -1;
+  }
+
+  &__descr {
+    @include minGrayFont;
+
+    margin: 0;
+    text-align: center;
+    line-height: 30px;
+  }
+}
+

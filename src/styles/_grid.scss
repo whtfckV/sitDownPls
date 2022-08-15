@@ -1,0 +1,257 @@
+.header {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, minmax(27px, auto));
+    gap: 2rem;
+    align-items: center;
+    grid-template-areas:
+    "reg   reg   reg   reg   .   info   info   info   info   info   info   info"
+    "logo  logo  .  navig  navig  navig  navig  navig  navig  navig  navig  navig"
+    "search search search search search search search search search search cab cab";
+  }
+
+  &__wrap {
+    display: flex;
+    grid-area: cab;
+    justify-self: end;
+    gap: 43px;
+  }
+}
+
+.region {
+  grid-area: reg;
+  display: flex;
+  justify-content: space-between;
+
+  &__field {
+    display: flex;
+    column-gap: 3px;
+  }
+}
+
+.info {
+  grid-area: info;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.toggle {
+  grid-area: toggle;
+  display: none;
+}
+
+.nav {
+  grid-area: navig;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1rem;
+  }
+
+  &-toggle {
+    display: none;
+  }
+}
+
+.search {
+  grid-area: search;
+  display: flex;
+
+  &__field {
+    display: flex;
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    column-gap: .7rem;
+  }
+}
+
+@media (max-width: 1199px) {
+  .header {
+    &__container {
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: repeat(4, minmax(27px, auto));
+      row-gap: 2rem;
+      grid-template-areas:
+      "reg    reg    reg    reg     reg      reg    reg    reg    reg"
+      "info  info   info   info   info   info   info         cab  cab"
+      "logo  logo     navig  navig  navig  navig  navig  navig  navig"
+      "search search search search search search search search search";
+    }
+
+    &__wrap {
+      margin-bottom: .65rem;
+    }
+
+  }
+
+  .region {
+    margin-bottom: -1.3rem;
+  }
+
+  .info {
+    margin-bottom: .65rem;
+  }
+
+  .search {
+    margin-top: .1rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .header {
+    &__container {
+      grid-template-columns: repeat(6, 1fr);
+      row-gap: 2.1rem;
+      grid-template-areas:
+      "reg    reg     reg     reg     reg    reg"
+      "info   info   info    info   info    info"
+      "toggle    .    logo    logo    cab    cab"
+      "search search search search search search";
+    }
+
+    &__wrap {
+      margin-bottom: 0;
+    }
+
+  }
+
+  .region {
+    margin-bottom: -2rem;
+  }
+
+  .info {
+    margin-bottom: 0;
+  }
+
+  .toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 108px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+
+    &__list {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  }
+
+  .search {
+    margin-top: -.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    &__container {
+      row-gap: 1rem;
+      grid-template-areas:
+      "logo   logo    logo   logo    logo   logo"
+      "reg    reg    reg      reg    reg     reg"
+      "toggle     .      .     cab    cab    cab"
+      "search search search search search search";
+    }
+  }
+
+  .info {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, minmax(14px, auto));
+    row-gap: .75rem;
+
+    &__item {
+      &:nth-child(1) {
+        grid-area: 1 / 1 / auto / span 2;
+      }
+
+      &:nth-child(2) {
+        grid-area: 1 / 3 / auto / span 4;
+        justify-self: end;
+      }
+
+      &:nth-child(3) {
+        grid-area: 2 / 1 / auto / span 3;
+      }
+
+      &:nth-child(4) {
+        grid-area: 2 / 4 / auto / span 3;
+        justify-self: end;
+      }
+    }
+  }
+
+  .logo {
+    justify-self: center;
+  }
+
+  .region {
+    justify-self: start;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .nav {
+    top: 143px;
+  }
+
+  .search {
+    margin-top: -.11rem;
+    &__field {
+      flex-direction: column;
+      row-gap: 1rem;
+    }
+  }
+}
+
+/*
+ОСТАВИТЬ ФУТЕР НА КОНЕЦ ИЗ=ЗА ПП
+.footer {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, minmax(27px, auto));
+    gap: 2rem;
+    grid-template-areas:
+    "logo  logo      .      .      ul  ul  ul  ul  ul  ul  ul  ul"
+    "social  social    .     .     ul  ul  ul  ul  ul  ul  ul  ul"
+    "desc desc desc desc desc desc desc desc desc desc desc desc ";
+  }
+
+  &__logo {
+    grid-area: logo;
+  }
+
+  &__list {
+    grid-area: ul;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__descr {
+    grid-area: desc;
+  }
+}
+
+.social {
+  grid-area: social;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+*/

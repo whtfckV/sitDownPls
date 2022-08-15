@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Home</title>
+  <link rel="stylesheet" href="libs/choices/choices.min.css">
+  <link rel="stylesheet" href="libs/swiper//swiper-bundle.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <script defer src="libs/choices/choices.min.js"></script>
+  <script defer src="libs/swiper/swiper-bundle.min.js"></script>
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  @@include('./modules/header.html')
+  <section class="hero">
+    <!-- Slider main container -->
+    <div id="heroSwiper" class="swiper hero__swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper hero__wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide hero__slide hero__slide-1">
+          <div class="hero__container container">
+            <h3 class="hero__title">Скидка&nbsp;15% на&nbsp;первую покупку</h3>
+            <button class="hero__btn">Получить!</button>
+          </div>
+        </div>
+        <div class="swiper-slide hero__slide hero__slide-2">
+          <div class="hero__container container">
+            <h3 class="hero__title">1000+ аксессуаров для дома</h3>
+            <button class="hero__btn">Получить!</button>
+          </div>
+        </div>
+        <div class="swiper-slide hero__slide hero__slide-3">
+          <div class="hero__container container">
+            <h3 class="hero__title hero__title_white">Коллекция стильного и&nbsp;яркого текстиля</h3>
+            <button class="hero__btn">Получить!</button>
+          </div>
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination hero__pagination">
+        <!-- <svg class="cp-bar__svg" width="20" height="20" viewBox="0 0 20 20">
+          <circle class="cp-bar__bg" r="9" cx="10" cy="10" fill="none" stroke-width="2" />
+          <circle class="cp-bar__progress" r="9" cx="10" cy="10" fill="none" stroke-width="2" />
+        </svg>
+        <svg class="cp-bar__svg" width="20" height="20" viewBox="0 0 20 20">
+          <circle class="cp-bar__bg" r="9" cx="10" cy="10" fill="none" stroke-width="2" />
+          <circle class="cp-bar__progress" r="9" cx="10" cy="10" fill="none" stroke-width="2" />
+        </svg>
+        <svg class="cp-bar__svg" width="20" height="20" viewBox="0 0 20 20">
+          <circle class="cp-bar__bg" r="9" cx="10" cy="10" fill="none" stroke-width="2" />
+          <circle class="cp-bar__progress" r="9" cx="10" cy="10" fill="none" stroke-width="2" />
+        </svg> -->
+      </div>
+    </div>
+  </section>
+  @@include('./modules/footer.html')
+</body>
+</html>

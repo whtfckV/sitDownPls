@@ -1,0 +1,92 @@
+@import "reset.scss";
+@import "variables.scss";
+@import "open-sans.scss";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+legend {
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+body {
+  font-family: 'Open sans', Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: $white;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.container {
+  padding: 0 10px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  height: 27px;
+  width: 187px;
+}
+
+@media (max-width: 1199px) {
+  .container {
+    max-width: 972px;
+  }
+}
+
+@media (max-width: 850px) {
+  .container {
+    padding: 0 .75rem;
+    max-width: 646px;
+  }
+}

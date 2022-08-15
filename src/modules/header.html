@@ -1,0 +1,86 @@
+<header class="header">
+  <div class="container header__container">
+    <form class="header__form region" action="#" method="post">
+      <fieldset class="region__field">
+        <legend class="region__legend hidden">Ваш регион:</legend>
+        <h4 class="region__title">Ваш регион:</h4>
+        <select name="region" id="region">
+          <option value="moscow" selected>Москва</option>
+          <option value="Kazan">Казань</option>
+          <option value="Ufa">Уфа</option>
+          <option value="Permian">Пермь</option>
+        </select>
+      </fieldset>
+      <div class="header__phone">
+        <a class="header__tel" href="tel:+74958854547">+7 (495) 885-45-47</a>
+        <svg class="header__tel-icon" width="16.5" height="16.5">
+          <use xlink:href="./img/sprite.svg#phone"></use>
+        </svg>
+      </div>
+    </form>
+    <ul class="header__list info">
+      <li class="info__item"><a class="info__link" href="#">О компании</a></li>
+      <li class="info__item"><a class="info__link" href="#">Гарантия и возврат</a></li>
+      <li class="info__item"><a class="info__link" href="#">Корпоративным клиентам</a></li>
+      <li class="info__item"><a class="info__link" href="#">Дизайн-решение</a></li>
+    </ul>
+    <a class="header__logo logo" href="#">
+      <picture>
+        <source srcset="./img/logo-2x.webp 2x, ./img/logo.webp" type="image/webp">
+        <source srcset="./img/logo-2x.png 2x" type="image/png">
+        <img class="logo__img" src="./img/logo.webp" alt="логотип компании sitdownpls">
+      </picture>
+    </a>
+    <button class="toggle is-close">
+      <span class="toggle__line"></span>
+    </button>
+    <nav class="header__nav nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a class="nav__link" href="./catalog.html">Каталог</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Магазины</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Шоу-рум</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Доставка и оплата</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Дисконт</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+      </ul>
+    </nav>
+    <form class="header__search search" action="#" method="post">
+      <fieldset class="search__field">
+        <legend class="search__legend hidden">поиск по сайту</legend>
+        <div class="search__wrap">
+          <input class="search__input" type="text" name="search" id="search" placeholder="Я хочу купить...">
+          <span class="search__icon"></span>
+          <button class="search__submit" type="submit">
+            <svg class="search__arrow arrow" width="7" height="12">
+              <use xlink:href="./img/sprite.svg#search-arrow"></use>
+            </svg>
+          </button>
+        </div>
+        <select name="category" id="category">
+          <option placeholder>Категория</option>
+          <option value="sofas">Диваны</option>
+          <option value="armchairs">Кресла</option>
+          <option value="puffs">Пуфы</option>
+          <option value="beds">Кровати</option>
+          <option value="cabinets">Тумбы</option>
+          <option value="dressers">Комоды</option>
+          <option value="chairs">Стулья</option>
+          <option value="tables">Столы</option>
+          <option value="accessories">Аксессуары</option>
+        </select>
+      </fieldset>
+    </form>
+    <div class="header__wrap">
+      <button class="header__cabinet">
+        <svg class="header__cabinet-icon" width="26" height="28">
+          <use xlink:href="./img/sprite.svg#user"></use>
+        </svg>
+      </button>
+      <button class="header__basket">
+        <svg class="header__basket-icon" width="30" height="28">
+          <use xlink:href="./img/sprite.svg#basket"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
