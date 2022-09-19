@@ -146,7 +146,7 @@ validation
       };
     };
 
-    xhr.open('POST', '../libs/PHPMailer/send.php', true);
+    xhr.open('POST', '../libs/phpmailer/send.php', true);
     xhr.send(formData);
 
     event.target.reset();

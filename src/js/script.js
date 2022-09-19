@@ -10,6 +10,8 @@ function formSendSuccess() {
   const modal = document.querySelector('#modalSuccess');
   const close = document.querySelector('#modalClose');
 
+  if(buyModal) buyModal.classList.remove('buy-modal--active')
+
   modal.style.visibility = 'visible';
   setTimeout(() => modal.classList.add('modal-success--active'), 100)
 

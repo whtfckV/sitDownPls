@@ -1,13 +1,16 @@
 <?php
 
-require "../libs/phpmailer/PHPMailer.php";
-require "../libs/phpmailer/SMTP.php";
-require "../libs/phpmailer/Exception.php";
+require "PHPMailer.php";
+require "SMTP.php";
+require "Exception.php";
 
 $title = "Заявка на обртаный звонок с SitDownPls";
 
-foreach ( $_POST as $key => $value ) {
-  if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
+$c = true;
+
+$title = "Заказ на обратный звонок";
+foreach ($_POST as $key => $value) {
+  if ($value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject") {
     $body .= "
     " . ( ( $c = !$c ) ? '<tr style="background-color: #c450f9">':'<tr style="background-color: #f6b6f6;">' ) . "
       <td style='padding: 10px; border: 1px solid #89f9a9'><b>$key</b></rd>
@@ -26,9 +29,9 @@ try {
   $mail->Charset = "UTF-8";
   $mail->SMTPAuth = true;
 
-  $mail->Host = "smtp.gmail.com";
+  $mail->Host = 'smtp.gmail.com';
   $mail->Username = 'alexandr311003@gmail.com';
-  $mail->Password = '';
+  $mail->Password = 'argizysotoqtjgpx';
   $mail->SMTPSecure = 'ssl';
   $mail->Port = 465;
 

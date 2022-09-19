@@ -80,6 +80,8 @@ const validation = new JustValidate(
   },
 );
 
+const buyModal = document.querySelector('#buyModal');
+
 validation
   .addField('#name', [
     {
@@ -124,7 +126,7 @@ validation
       };
     };
 
-    xhr.open('POST', '../libs/PHPMailer/send.php', true);
+    xhr.open('POST', '../libs/phpmailer/send.php', true);
     xhr.send(formData);
 
     event.target.reset();
@@ -154,7 +156,6 @@ sofaModalClose.onclick = () => {
 // modal buy in one click
 const buttonBuy = document.querySelector('#buy');
 const buyModalClose = document.querySelector('#buyModalClose');
-const buyModal = document.querySelector('#buyModal');
 
 buttonBuy.onclick = () => {
   buyModal.classList.add('buy-modal--active');
