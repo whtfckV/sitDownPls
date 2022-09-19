@@ -1,15 +1,484 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title>catalog</title>
+  <title>Каталог</title>
+  <link rel="stylesheet" href="libs/choices/choices.min.css">
+  <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="libs/nouislider/nouislider.min.css">
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/catalog.css">
+  <script defer src="libs/choices/choices.min.js"></script>
+  <script defer src="libs/swiper/swiper-bundle.min.js"></script>
+  <script defer src="libs/just-validate.production.min.js"></script>
+  <script defer src="libs/inputmask.min.js"></script>
+  <script defer src="js/focus-visible.js"></script>
+  <script defer src="libs/nouislider/nouislider.min.js"></script>
+  <script defer src="js/script.js"></script>
+  <script defer src="js/header.js"></script>
+  <script defer src="js/catalog.js"></script>
 </head>
+
 <body>
   @@include('./modules/header.html')
-  <p>content</p>
+  <div class="container">
+    <ol itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumbs-list">
+      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs-list__item">
+        <a itemprop="item" href="/"><span itemprop="name">Главная</span></a>
+        <meta itemprop="position" content="1">
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs-list__item">
+        <a itemprop="item" href="/catalog/"><span itemprop="name">Каталог</span></a>
+        <meta itemprop="position" content="2">
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs-list__item">
+        <a itemprop="item" href="/catalog/sofa/"> <span itemprop="name">Диваны</span></a>
+        <meta itemprop="position" content="3">
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs-list__item">
+        <span itemprop="name">Прямые диваны</span>
+        <meta itemprop="position" content="4">
+      </li>
+    </ol>
+  </div>
+  <section class="catalog">
+    <div class="container catalog__container">
+      <div class="left">
+        <h2 class="catalog__title">Каталог</h2>
+        <form class="filter" action="#" method="post">
+          <fieldset class="filter__field">
+            <legend class="filter__legend">
+              <span class="filter__legend-dsktp">Фильтровать по:</span>
+            </legend>
+            <span class="filter__legend-mbl">Фильтры:</span>
+            <fieldset class="filter__group group">
+              <legend class="group__legend">Категория</legend>
+              <button class="group__drop" type="button" aria-expanded="false" aria-label="открыть список">Категория</button>
+              <ul class="group__list drop-item">
+                <li class="group__item">
+                  <label class="group__label">
+                    <input class="group__checkbox hidden" type="checkbox" name="sofa" id="sofa" checked>
+                    <span class="group__checkbox-native"></span><span class="group__descr">Диваны</span>
+                  </label>
+                </li>
+                <li class="group__item">
+                  <label class="group__label">
+                    <input class="group__checkbox hidden" type="checkbox" name="armchair" id="armchair">
+                    <span class="group__checkbox-native"></span><span class="group__descr">Кресла</span>
+                  </label>
+                </li>
+                <li class="group__item">
+                  <label class="group__label">
+                    <input class="group__checkbox hidden" type="checkbox" name="pouf" id="pouf">
+                    <span class="group__checkbox-native"></span><span class="group__descr">Пуфы</span>
+                  </label>
+                </li>
+                <li class="group__item">
+                  <label class="group__label">
+                    <input class="group__checkbox hidden" type="checkbox" name="bed" id="bed">
+                    <span class="group__checkbox-native"></span><span class="group__descr">Кровати</span>
+                  </label>
+                </li>
+                <li class="group__item">
+                  <label class="group__label">
+                    <input class="group__checkbox hidden" type="checkbox" name="cabinet" id="cabinet">
+                    <span class="group__checkbox-native"></span><span class="group__descr">Тумбы</span>
+                  </label>
+                </li>
+                <li class="group__item">
+                  <label class="group__label">
+                    <input class="group__checkbox hidden" type="checkbox" name="dresser" id="dresser">
+                    <span class="group__checkbox-native"></span><span class="group__descr">Комоды</span>
+                  </label>
+                </li>
+                <li class="group__item">
+                  <label class="group__label">
+                    <input class="group__checkbox hidden" type="checkbox" name="chair" id="chair">
+                    <span class="group__checkbox-native"></span><span class="group__descr">Стулья</span>
+                  </label>
+                </li>
+                <li class="group__item">
+                  <label class="group__label">
+                    <input class="group__checkbox hidden" type="checkbox" name="table" id="table">
+                    <span class="group__checkbox-native"></span><span class="group__descr">Столы</span>
+                  </label>
+                </li>
+                <li class="group__item">
+                  <label class="group__label">
+                    <input class="group__checkbox hidden" type="checkbox" name="accessory" id="accessory">
+                    <span class="group__checkbox-native"></span><span class="group__descr">Аксессуары</span>
+                  </label>
+                  <button type="button" class="group__btn">+ ещё 12</button>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter__group group">
+              <legend class="group__legend group__legend_price">Цена</legend>
+              <button class="group__drop" type="button" aria-expanded="false" aria-label="открыть список">Цена</button>
+              <div class="range-wrapper group__range drop-item">
+                <div class="range-wrapper__inner range-wrapper__inner_from">
+                  <label class="range-wrapper__text" for="field-from">от</label>
+                  <input class="range-wrapper__field range-wrapper__field_first" id="field-from" type="number"
+                    name="numberFieldFrom" min="2000" max="150000" aria-label="Введите минимальную цену" />
+                </div>
+                <div class="range-wrapper__inner range-wrapper__inner_to">
+                  <label class="range-wrapper__text" for="field-to">до</label>
+                  <input class="range-wrapper__field range-wrapper__field_second" id="field-to" type="number"
+                    name="numberFieldTo" min="2000" max="150000" aria-label="Введите максимальную цену" />
+                </div>
+              </div>
+              <div class="wrapper__slider"></div>
+            </fieldset>
+            <fieldset class="filter__group group">
+              <legend class="group__legend">Скидка</legend>
+              <button class="group__drop" type="button" aria-expanded="false" aria-label="открыть список">Скидка</button>
+              <ul class="group__list drop-item">
+                <li class="group__item">
+                  <label class="group__label">
+                    <input class="group__checkbox hidden" type="checkbox" name="over" id="over">
+                    <span class="group__checkbox-native"></span><span class="group__descr group__descr_mbl group__descr_more"><span class="group__descr_dsktp">Более</span> 5 000</span>
+                  </label>
+                </li>
+                <li class="group__item">
+                  <label class="group__label">
+                    <input class="group__checkbox hidden" type="checkbox" name="less" id="less">
+                    <span class="group__checkbox-native"></span><span class="group__descr group__descr_mbl group__descr_less"><span class="group__descr_dsktp">Менее</span> 5 000</span>
+                  </label>
+                </li>
+                <li class="group__item">
+                  <label class="group__label">
+                    <input class="group__checkbox hidden" type="checkbox" name="noMatter" id="noMatter" checked>
+                    <span class="group__checkbox-native"></span><span class="group__descr">Не важно</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter__group group">
+              <legend class="group__legend">Цвет</legend>
+              <button class="group__drop" type="button" aria-expanded="false">Цвет</button>
+              <ul class="group__list drop-item">
+                <li class="group__item">
+                  <label class="group__label">
+                    <input class="group__checkbox hidden" type="checkbox" name="Brown" id="Brown">
+                    <span class="group__checkbox-native"></span><span class="group__descr">Коричневый</span>
+                  </label>
+                </li>
+                <li class="group__item">
+                  <label class="group__label">
+                    <input class="group__checkbox hidden" type="checkbox" name="Black" id="Black">
+                    <span class="group__checkbox-native"></span><span class="group__descr">Черный</span>
+                  </label>
+                </li>
+                <li class="group__item">
+                  <label class="group__label">
+                    <input class="group__checkbox hidden" type="checkbox" name="Beige" id="Beige">
+                    <span class="group__checkbox-native"></span><span class="group__descr">Бежевый</span>
+                  </label>
+                </li>
+                <li class="group__item">
+                  <label class="group__label">
+                    <input class="group__checkbox hidden" type="checkbox" name="Grey" id="Grey">
+                    <span class="group__checkbox-native"></span><span class="group__descr">Серый</span>
+                  </label>
+                </li>
+                <li class="group__item">
+                  <label class="group__label">
+                    <input class="group__checkbox hidden" type="checkbox" name="White" id="White">
+                    <span class="group__checkbox-native"></span><span class="group__descr">Белый</span>
+                  </label>
+                </li>
+                <li class="group__item">
+                  <label class="group__label">
+                    <input class="group__checkbox hidden" type="checkbox" name="Blue" id="Blue">
+                    <span class="group__checkbox-native"></span><span class="group__descr">Синий</span>
+                  </label>
+                </li>
+                <li class="group__item">
+                  <label class="group__label">
+                    <input class="group__checkbox hidden" type="checkbox" name="Orange" id="Orange" checked>
+                    <span class="group__checkbox-native"></span><span class="group__descr">Оранжевый</span>
+                  </label>
+                </li>
+                <li class="group__item">
+                  <label class="group__label">
+                    <input class="group__checkbox hidden" type="checkbox" name="Yellow" id="Yellow">
+                    <span class="group__checkbox-native"></span><span class="group__descr">Желтый</span>
+                  </label>
+                </li>
+                <li class="group__item">
+                  <label class="group__label">
+                    <input class="group__checkbox hidden" type="checkbox" name="Green" id="Green">
+                    <span class="group__checkbox-native"></span><span class="group__descr">Зеленый</span>
+                  </label>
+                  <button type="button" class="group__btn">+ ещё 7</button>
+                </li>
+              </ul>
+            </fieldset>
+          </fieldset>
+        </form>
+        <div class="banner">
+          <div class="banner__content">
+            <h3 class="banner__title">Оксфорд 1950</h3>
+            <p class="banner__descr">Новая коллекция изысканных кресел</p>
+            <a href="#" class="link-catalog">
+              <span class="link-catalog__text">В каталог</span>
+              <span class="link-catalog__icon">
+                <svg class="link-catalog__arrow arrow" width="6" height="9">
+                  <use xlink:href="./img/sprite.svg#search-arrow"></use>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Slider main container -->
+      <div id="catalogSwiper" class="swiper catalog__swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper catalog__wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide catalog__slide card">
+            <span class="card__star">5,0</span>
+            <picture class="card__pic">
+              <source srcset="./img/r-94-320.webp, ./img/r-94-2x-320.webp 2x" media="(max-width: 609px)">
+              <source srcset="./img/r-94-2x.webp 2x">
+              <img class="card__img" src="./img/r-94.webp" alt="Фото товара">
+            </picture>
+            <div class="card__content">
+              <h3 class="card__title">Диван кожаный “R&#8209;94”</h3>
+              <span class="card__price">94&nbsp;990 руб</span>
+              <button class="card__btn">Купить</button>
+            </div>
+          </div>
+          <div class="swiper-slide catalog__slide card">
+            <span class="card__star">4,9</span>
+            <picture class="card__pic">
+              <source srcset="./img/t-75-320.webp, ./img/t-75-2x-320.webp 2x" media="(max-width: 609px)">
+              <source srcset="./img/t-75-2x.webp 2x">
+              <img class="card__img" src="./img/t-75.webp" alt="Фото товара">
+            </picture>
+            <div class="card__content">
+              <h3 class="card__title">Диван апартековый “T&#8209;75”</h3>
+              <span class="card__price">69&nbsp;990 руб</span>
+              <button class="card__btn">Купить</button>
+            </div>
+          </div>
+          <div class="swiper-slide catalog__slide card">
+            <span class="card__star">4,8</span>
+            <picture class="card__pic">
+              <source srcset="./img/d-31-320.webp, ./img/d-31-2x-320.webp 2x" media="(max-width: 609px)">
+              <source srcset="./img/d-31-2x.webp 2x">
+              <img class="card__img" src="./img/d-31.webp" alt="Фото товара">
+            </picture>
+            <div class="card__content">
+              <h3 class="card__title">Диван тканевый “D&#8209;31”</h3>
+              <span class="card__price">28&nbsp;490 руб</span>
+              <a class="card__btn" href="./d-31.html">Купить</a>
+            </div>
+          </div>
+          <div class="swiper-slide catalog__slide card">
+            <span class="card__star">4,8</span>
+            <picture class="card__pic">
+              <source srcset="./img/y-68-320.webp, ./img/y-68-2x-320.webp 2x" media="(max-width: 609px)">
+              <source srcset="./img/y-68-2x.webp 2x">
+              <img class="card__img" src="./img/y-68.webp" alt="Фото товара">
+            </picture>
+            <div class="card__content">
+              <h3 class="card__title">Диван велюровый “Y&#8209;68”</h3>
+              <span class="card__price">22&nbsp;990 руб</span>
+              <button class="card__btn">Купить</button>
+            </div>
+          </div>
+          <div class="swiper-slide catalog__slide card">
+            <span class="card__star">4,8</span>
+            <picture class="card__pic">
+              <source srcset="./img/w-95-320.webp, ./img/w-95-2x-320.webp 2x" media="(max-width: 609px)">
+              <source srcset="./img/w-95-2x.webp 2x">
+              <img class="card__img" src="./img/w-95.webp" alt="Фото товара">
+            </picture>
+            <div class="card__content">
+              <h3 class="card__title">Диван из&nbsp;шинила “W&#8209;95”</h3>
+              <span class="card__price">22&nbsp;990 руб</span>
+              <button class="card__btn">Купить</button>
+            </div>
+          </div>
+          <div class="swiper-slide catalog__slide card">
+            <span class="card__star">4,8</span>
+            <picture class="card__pic">
+              <source srcset="./img/g-41-320.webp, ./img/g-41-2x-320.webp 2x" media="(max-width: 609px)">
+              <source srcset="./img/g-41-2x.webp 2x">
+              <img class="card__img" src="./img/g-41.webp" alt="Фото товара">
+            </picture>
+            <div class="card__content">
+              <h3 class="card__title">Диван флоковый “G&#8209;41”</h3>
+              <span class="card__price">17&nbsp;990 руб</span>
+              <button class="card__btn">Купить</button>
+            </div>
+          </div>
+          <div class="swiper-slide catalog__slide card">
+            <span class="card__star">4,8</span>
+            <picture class="card__pic">
+              <source srcset="./img/v-43-320.webp, ./img/v-43-2x-320.webp 2x" media="(max-width: 609px)">
+              <source srcset="./img/v-43-2x.webp 2x">
+              <img class="card__img" src="./img/v-43.webp" alt="Фото товара">
+            </picture>
+            <div class="card__content">
+              <h3 class="card__title">Диван шиниловый “V&#8209;43”</h3>
+              <span class="card__price">19&nbsp;990 руб</span>
+              <button class="card__btn">Купить</button>
+            </div>
+          </div>
+          <div class="swiper-slide catalog__slide card">
+            <span class="card__star">4,7</span>
+            <picture class="card__pic">
+              <source srcset="./img/s-99-320.webp, ./img/s-99-2x-320.webp 2x" media="(max-width: 609px)">
+              <source srcset="./img/s-99-2x.webp 2x">
+              <img class="card__img" src="./img/s-99.webp" alt="Фото товара">
+            </picture>
+            <div class="card__content">
+              <h3 class="card__title">Диван велюровый “S&#8209;99”</h3>
+              <span class="card__price">19&nbsp;990 руб</span>
+              <button class="card__btn">Купить</button>
+            </div>
+          </div>
+          <div class="swiper-slide catalog__slide card">
+            <span class="card__star">4,7</span>
+            <picture class="card__pic">
+              <source srcset="./img/f-85-320.webp, ./img/f-85-2x-320.webp 2x" media="(max-width: 609px)">
+              <source srcset="./img/f-85-2x.webp 2x">
+              <img class="card__img" src="./img/f-85.webp" alt="Фото товара">
+            </picture>
+            <div class="card__content">
+              <h3 class="card__title">Диван из&nbsp;кожзама “F&#8209;85”</h3>
+              <span class="card__price">26&nbsp;990 руб</span>
+              <button class="card__btn">Купить</button>
+            </div>
+          </div>
+          <div class="swiper-slide catalog__slide card">
+            <span class="card__star">4,6</span>
+            <picture class="card__pic">
+              <source srcset="./img/h-64-320.webp, ./img/h-64-2x-320.webp 2x" media="(max-width: 609px)">
+              <source srcset="./img/h-64-2x.webp 2x">
+              <img class="card__img" src="./img/h-64.webp" alt="Фото товара">
+            </picture>
+            <div class="card__content">
+              <h3 class="card__title">Диван флоковый “H&#8209;64”</h3>
+              <span class="card__price">25&nbsp;990 руб</span>
+              <button class="card__btn">Купить</button>
+            </div>
+          </div>
+          <div class="swiper-slide catalog__slide card">
+            <span class="card__star">4,6</span>
+            <picture class="card__pic">
+              <source srcset="./img/h-58-320.webp, ./img/h-58-2x-320.webp 2x" media="(max-width: 609px)">
+              <source srcset="./img/h-58-2x.webp 2x">
+              <img class="card__img" src="./img/h-58.webp" alt="Фото товара">
+            </picture>
+            <div class="card__content">
+              <h3 class="card__title">Диван флоковый “H&#8209;58”</h3>
+              <span class="card__price">23&nbsp;990 руб</span>
+              <button class="card__btn">Купить</button>
+            </div>
+          </div>
+          <div class="swiper-slide catalog__slide card">
+            <span class="card__star">4,6</span>
+            <picture class="card__pic">
+              <source srcset="./img/r-43-320.webp, ./img/r-43-2x-320.webp 2x" media="(max-width: 609px)">
+              <source srcset="./img/r-43-2x.webp 2x">
+              <img class="card__img" src="./img/r-43.webp" alt="Фото товара">
+            </picture>
+            <div class="card__content">
+              <h3 class="card__title">Диван из&nbsp;кожзама “R&#8209;43”</h3>
+              <span class="card__price">33&nbsp;990 руб</span>
+              <button class="card__btn">Купить</button>
+            </div>
+          </div>
+          <div class="swiper-slide catalog__slide card">
+            <span class="card__star">4,6</span>
+            <picture class="card__pic">
+              <source srcset="./img/c-42-320.webp, ./img/c-42-2x-320.webp 2x" media="(max-width: 609px)">
+              <source srcset="./img/c-42-2x.webp 2x">
+              <img class="card__img" src="./img/c-42.webp" alt="Фото товара">
+            </picture>
+            <div class="card__content">
+              <h3 class="card__title">Диван из&nbsp;шинила “С&#8209;42”</h3>
+              <span class="card__price">18&nbsp;990 руб</span>
+              <button class="card__btn">Купить</button>
+            </div>
+          </div>
+          <div class="swiper-slide catalog__slide card">
+            <span class="card__star">4,6</span>
+            <picture class="card__pic">
+              <source srcset="./img/u-58-320.webp, ./img/u-58-2x-320.webp 2x" media="(max-width: 609px)">
+              <source srcset="./img/u-58-2x.webp 2x">
+              <img class="card__img" src="./img/u-58.webp" alt="Фото товара">
+            </picture>
+            <div class="card__content">
+              <h3 class="card__title">Диван велюровый “U&#8209;58”</h3>
+              <span class="card__price">21&nbsp;990 руб</span>
+              <button class="card__btn">Купить</button>
+            </div>
+          </div>
+          <div class="swiper-slide catalog__slide card">
+            <span class="card__star">4,5</span>
+            <picture class="card__pic">
+              <source srcset="./img/f-41-320.webp, ./img/f-41-2x-320.webp 2x" media="(max-width: 609px)">
+              <source srcset="./img/f-41-2x.webp 2x">
+              <img class="card__img" src="./img/f-41.webp" alt="Фото товара">
+            </picture>
+            <div class="card__content">
+              <h3 class="card__title">Диван флоковый “F&#8209;41”</h3>
+              <span class="card__price">17&nbsp;990 руб</span>
+              <button class="card__btn">Купить</button>
+            </div>
+          </div>
+          <div class="swiper-slide catalog__slide card">
+            <span class="card__star">4,5</span>
+            <picture class="card__pic">
+              <source srcset="./img/r-85-320.webp, ./img/r-85-2x-320.webp 2x" media="(max-width: 609px)">
+              <source srcset="./img/r-85-2x.webp 2x">
+              <img class="card__img" src="./img/r-85.webp" alt="Фото товара">
+            </picture>
+            <div class="card__content">
+              <h3 class="card__title">Диван велюровый “R&#8209;85”</h3>
+              <span class="card__price">34&nbsp;990 руб</span>
+              <button class="card__btn">Купить</button>
+            </div>
+          </div>
+          <div class="swiper-slide catalog__slide card">
+            <span class="card__star">4,5</span>
+            <picture class="card__pic">
+              <source srcset="./img/s-44-320.webp, ./img/s-44-2x-320.webp 2x" media="(max-width: 609px)">
+              <source srcset="./img/s-44-2x.webp 2x">
+              <img class="card__img" src="./img/s-44.webp" alt="Фото товара">
+            </picture>
+            <div class="card__content">
+              <h3 class="card__title">Диван велюровый “S&#8209;44”</h3>
+              <span class="card__price">19&nbsp;990 руб</span>
+              <button class="card__btn">Купить</button>
+            </div>
+          </div>
+          <div class="swiper-slide catalog__slide card">
+            <span class="card__star">4,4</span>
+            <picture class="card__pic">
+              <source srcset="./img/c-80-320.webp, ./img/c-80-2x-320.webp 2x" media="(max-width: 609px)">
+              <source srcset="./img/c-80-2x.webp 2x">
+              <img class="card__img" src="./img/c-80.webp" alt="Фото товара">
+            </picture>
+            <div class="card__content">
+              <h3 class="card__title">Диван из&nbsp;шинила “C&#8209;80”</h3>
+              <span class="card__price">20&nbsp;990 руб</span>
+              <button class="card__btn">Купить</button>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination catalog__pagination"></div>
+      </div>
+    </div>
+  </section>
   @@include('./modules/footer.html')
 </body>
 </html>

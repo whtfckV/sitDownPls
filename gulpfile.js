@@ -132,7 +132,6 @@ const scripts = () => {
     .pipe(gulpIf(argv.prod, babel({
       presets: ['@babel/env']
     })))
-    .pipe(concat('script.js'))
     .pipe(gulpIf(argv.prod, uglify().on('error', notify.onError())))
     .pipe(gulpIf(!argv.prod, sourcemaps.write()))
     .pipe(dest('./dist/js'))

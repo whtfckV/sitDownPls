@@ -1,6 +1,11 @@
 @import "reset.scss";
 @import "variables.scss";
 @import "open-sans.scss";
+@import "mixin.scss";
+
+:root {
+  --sectionOffset: 70px;
+}
 
 html {
   box-sizing: border-box;
@@ -78,9 +83,315 @@ button {
   width: 187px;
 }
 
+.section-title {
+  margin-bottom: 26px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+}
+
+.card-sale {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 511px;
+  width: auto;
+  border-radius: 10px;
+  background-color: $grey_light;
+
+  &-z-44,
+  &-z-85 {
+    &::before {
+      content: '';
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &-z-44 {
+    &::before {
+      width: 230px;
+      height: 107px;
+      background-image: url('../img/z-44-bg.webp');
+    }
+  }
+
+  &-z-85 {
+    &::before {
+      width: 230px;
+      height: 107px;
+      background-image: url('../img/z-85-bg.webp');
+    }
+  }
+
+  &__discount {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    padding: 7.5px;
+    min-width: 4.2rem;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    background-color: $secondary;
+    color: $white;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 100%;
+      top: 0;
+      border-width: 17px 10px;
+      border-style: solid;
+      border-color: transparent transparent transparent $secondary;
+    }
+  }
+
+  &__pic {
+    align-self: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 23px;
+    padding: 12px 44px 30px 30px;
+
+    &_sofa {
+      padding-right: 372px;
+    }
+  }
+
+  &__title {
+    max-width: 222px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    color: $black;
+  }
+
+  &__price {
+    line-height: 130%;
+
+    &_new {
+      margin-right: 26px;
+      font-size: 18px;
+      color: $secondary;
+    }
+
+    &_old {
+      position: relative;
+      font-size: 16px;
+      color: $grey;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 60%;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: $grey;
+      }
+    }
+  }
+
+  &__btn {
+    @include btnBuy;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  border-radius: 10px;
+  min-height: 420px;
+  max-width: 296px;
+  background-color: $grey_light;
+  transform: translateY(0);
+  opacity: 1;
+  transition:
+  transform .3s ease,
+  opacity .3s ease;
+
+  &__star {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    padding-left: 22.5px;
+    line-height: 130%;
+    color: $secondary;
+    background: url('../img/star.svg') no-repeat left center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 22px;
+    padding: 14px 30px 30px 30px;
+  }
+
+  &__title {
+    max-width: 96%;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    color: $black;
+  }
+
+  &__price {
+    font-size: 16px;
+    line-height: 130%;
+    color: $grey_shade;
+  }
+
+  &__btn {
+    @include btnBuy;
+  }
+}
+
+.modal-success {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 185px;
+  background-color: rgba($color: $black, $alpha: .3);
+  z-index: 20;
+  opacity: 0;
+  transition: opacity .3s ease;
+  visibility: hidden;
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 624px;
+    height: 421px;
+    background: $white;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition:
+    transform .3s ease,
+    opacity .3s ease;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 118px;
+      left: 202px;
+      width: 172px;
+      height: 117px;
+      background: url('../img/elephant.svg') no-repeat center;
+    }
+  }
+
+  &__descr {
+    padding-top: 267px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    color: $black;
+  }
+
+  &--active {
+    opacity: 1;
+
+    .modal-success__content {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 2px;
+  height: 24px;
+  color: $grey;
+  transition:
+  color .3s ease,
+  background-color .3s ease;
+
+  &:focus {
+    outline: none;
+    color: $primary_shade;
+    background-color: $pink_violet;
+  }
+
+  @media screen {
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &:active {
+    background-color: transparent;
+    color: $primary_shade;
+  }
+
+}
+
+.breadcrumbs-list {
+  @include minGrayFont;
+
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2rem;
+  list-style: none;
+
+  &__item {
+    &:not(:last-child)::after {
+      content: '/';
+      padding: 0 5px;
+    }
+
+    &:last-child {
+      color: $primary_shade;
+    }
+  }
+}
+
+.link-catalog {
+  @include linkCatalog;
+}
+
 @media (max-width: 1199px) {
   .container {
     max-width: 972px;
+  }
+
+  .card-sale {
+    &-z-44,
+    &-z-85 {
+      &::before {
+        content: none;
+      }
+    }
+
+    &__content {
+      &_sofa {
+        padding-right: 44px;
+        padding-top: 50px;
+      }
+    }
   }
 }
 
@@ -88,5 +399,73 @@ button {
   .container {
     padding: 0 .75rem;
     max-width: 646px;
+  }
+}
+
+@media(max-width: 609px) {
+  .card {
+    min-height: 278px;
+
+    &__star {
+      top: 16px;
+      left: 15px;
+      padding-left: 20px;
+      font-size: 12px;
+    }
+
+    &__content {
+      row-gap: 16px;
+      padding: 5px 16px 16px 16px;
+    }
+
+    &__title {
+      max-width: 108px;
+      font-size: 16px;
+    }
+
+    &__btn {
+      align-self: center;
+      padding: 0 23px;
+      line-height: 36px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 24px;
+  }
+
+  .modal-close {
+    top: 1rem;
+    right: 1rem;
+
+    &__icon {
+      height: 12px;
+      width: 12px;
+    }
+  }
+
+  .modal-success {
+    &__content {
+      align-items: center;
+      width: 296px;
+      height: 216px;
+
+      &::before {
+        top: 60px;
+        left: 101px;
+        width: 73px;
+        height: 50px;
+        background-image: url('../img/elephant-320.svg');
+      }
+    }
+
+    &__descr {
+      padding-top: 124px;
+      max-width: 194px;
+      font-size: 16px;
+      line-height: 100%;
+    }
   }
 }

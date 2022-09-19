@@ -56,48 +56,63 @@
 }
 
 @mixin arrowBtn($size) {
-    padding: 0;
-    padding-left: 1px;
-    border: 2px solid $primary;
-    border-radius: 32px;
-    width: $size;
-    height: $size;
-    background-color: transparent;
-    transition:
-    background-color .3s ease,
-    border-color .3s ease;
+  padding: 0;
+  padding-left: 1px;
+  border: 2px solid $primary;
+  border-radius: 32px;
+  width: $size;
+  height: $size;
+  background-color: transparent;
+  transition:
+  background-color .3s ease,
+  border-color .3s ease;
+
+  &-prev {
+    margin-right: 9px;
+    transform: rotate(180deg);
+  }
+
+  .arrow {
+    color: $primary;
+    transition: color .3s ease;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $primary_light;
 
     .arrow {
-      color: $primary;
-      transition: color .3s ease;
+      color: $white;
     }
+  }
 
-    &:hover {
-      background-color: $primary;
+  &:hover {
+    background-color: $primary;
 
-      .arrow {
-        color: $white;
-      }
+    .arrow {
+      color: $white;
     }
+  }
 
-    &:focus {
-      outline: none;
-      background-color: $primary_light;
+  &:active {
+    outline: none;
+    background-color: $primary_shade;
+    border-color: $primary_shade;
 
-      .arrow {
-        color: $white;
-      }
+    .arrow {
+      color: $white;
     }
+  }
 
-    &:active {
-      outline: none;
-      background-color: $primary_shade;
-      border-color: $primary_shade;
+  &.swiper-button-disabled {
+    border-color: $grey;
+    background-color: transparent;
+    cursor: not-allowed;
 
-      .arrow {
-        color: $white;
-      }
+    .arrow {
+      color: $grey;
     }
+  }
 }
 
 @mixin btnOpaque($font-weight, $offsetX, $offsetY) {
@@ -139,6 +154,197 @@
   }
 }
 
-@mixin btnTransparent {
+@mixin btnBuy {
+  padding: 0 34px;
+  border: 2px solid $primary;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 51px;
+  color: $primary;
+  cursor: pointer;
+  transition:
+  background-color .3s ease,
+  color .3s ease,
+  border-color .3s ease;
 
+  &:focus {
+    outline: none;
+    border-color: $primary;
+    color: $white;
+    background-color: $primary_light;
+  }
+
+  @media screen {
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  &:active {
+    border-color: $primary_shade;
+    color: $white;
+    background-color: $primary_shade;
+  }
+}
+
+@mixin linkCatalog {
+  position: relative;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 120%;
+  color: $primary;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 2px;
+    width: 81px;
+    background-color: $primary;
+    transition:
+    transform .3s ease,
+    background-color .3s ease;
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+
+  &__icon {
+    display: inline-block;
+    margin-left: 1px;
+    border-radius: 50%;
+    border: 2px solid $primary;
+    width: 22px;
+    height: 22px;
+    transition:
+    border-color .3s ease,
+    background-color .3s ease;
+  }
+
+  &__arrow {
+    margin: 2px 6px;
+    color: $primary;
+    transition: color .3s ease;
+  }
+
+  &:focus {
+    outline: none;
+
+    &::before {
+      transform: scaleX(1);
+    }
+
+    & .link-catalog__icon {
+      background-color: $primary_light;
+    }
+
+    & .link-catalog__arrow {
+      color: $white;
+    }
+  }
+
+  @media screen {
+    &:hover {
+      &::before {
+        transform: scaleX(1);
+      }
+
+      & .link-catalog__icon {
+        background-color: $primary;
+      }
+
+      & .link-catalog__arrow {
+        color: $white;
+      }
+    }
+  }
+
+  &:focus {
+    color: $primary_shade;
+
+    &::before {
+      transform: scaleX(1);
+      background-color: $primary_shade;
+    }
+
+    & .link-catalog__icon {
+      background-color: $primary_shade;
+      border-color: $primary_shade;
+    }
+
+    & .link-catalog__arrow {
+      color: $white;
+    }
+  }
+
+  @media(max-width: 576px) {
+    &::before {
+      content: none;
+    }
+
+    &__text {
+      display: none;
+    }
+  }
+}
+
+@mixin input {
+  border: 1px solid $grey_light;
+  border-radius: 10px;
+  padding-left: 18px;
+  width: 100%;
+  height: 54px;
+  background-color: $grey_light;
+  transition:
+  background-color .3s ease,
+  border-color .3s ease;
+
+  &:focus {
+    outline: none;
+    background-color: $pink_light;
+    border-color: $primary;
+  }
+
+  @media screen {
+    &:hover {
+      background-color: $md_grey;
+    }
+  }
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    color: $grey;
+  }
+
+  &.is-invalid {
+    border-color: $red_input
+  }
+
+  &.is-success {
+    border-color: $green_input;
+  }
+}
+
+@mixin checkbox {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  border: 1px solid $grey;
+  border-radius: 2px;
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  transform: translateY(-50%);
+  transition:
+  background-color .3s ease,
+  border-color .3s ease;
+
+  &::before {
+    @include ghost;
+    background: url('../img/mark.svg') no-repeat center / 13px 10px;
+  }
 }

@@ -75,6 +75,61 @@
   }
 }
 
+.top {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 511px 405px;
+    gap: 2rem;
+    grid-template-areas:
+    "sofa sofa sofa sofa sofa sofa armchair armchair armchair armchair armchair armchair"
+    "bed bed bed bed pedestal pedestal pedestal pedestal chair chair chair chair";
+  }
+
+  &__sofa {
+    grid-area: sofa;
+  }
+  &__armchair {
+    grid-area: armchair;
+  }
+  &__bed {
+    grid-area: bed;
+  }
+  &__pedestal {
+    grid-area: pedestal;
+  }
+  &__chair {
+    grid-area: chair;
+  }
+}
+
+.sofa {
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 245px 81px;
+    column-gap: 2rem;
+    row-gap: 1rem;
+    grid-template-areas:
+    "swiperTop swiperTop swiperTop swiperTop swiperTop swiperTop sofaContent sofaContent sofaContent sofaContent sofaContent sofaContent"
+    "swiperBottom swiperBottom swiperBottom swiperBottom swiperBottom swiperBottom sofaContent sofaContent sofaContent sofaContent sofaContent sofaContent";
+  }
+
+  &__content {
+    grid-area: sofaContent;
+  }
+}
+
+.swiper-top {
+  grid-area: swiperTop;
+  width: 100%;
+}
+
+.swiper-bottom {
+  grid-area: swiperBottom;
+  width: 100%;
+}
+
 @media (max-width: 1199px) {
   .header {
     &__container {
@@ -104,6 +159,26 @@
 
   .search {
     margin-top: .1rem;
+  }
+
+  .top {
+    &__list {
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: repeat(2, 511px);
+      grid-template-areas:
+      "sofa sofa sofa sofa sofa sofa bed bed bed"
+      "pedestal pedestal pedestal armchair armchair armchair chair chair chair";
+    }
+  }
+
+  .sofa {
+    &__top {
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: 202px 81px;
+      grid-template-areas:
+      "swiperTop swiperTop swiperTop swiperTop swiperTop sofaContent sofaContent sofaContent sofaContent"
+      "swiperBottom swiperBottom swiperBottom swiperBottom swiperBottom  sofaContent sofaContent sofaContent sofaContent";
+    }
   }
 }
 
@@ -153,9 +228,39 @@
   .search {
     margin-top: -.1rem;
   }
+
+  .top {
+    &__list {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(3, 511px);
+      grid-template-areas:
+      "sofa sofa sofa sofa sofa sofa"
+      "bed bed bed armchair armchair armchair"
+      "pedestal pedestal pedestal chair chair chair";
+    }
+  }
+
+  .sofa {
+    &__top {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: 245px 349px;
+      row-gap: 2rem;
+      grid-template-areas:
+      "swiperTop swiperTop swiperTop swiperTop swiperTop swiperTop"
+      "swiperBottom swiperBottom sofaContent sofaContent sofaContent sofaContent";
+    }
+
+    &__content {
+      align-self: center;
+    }
+  }
 }
 
 @media (max-width: 576px) {
+  .breadcrumbs-list {
+    display: none;
+  }
+
   .header {
     &__container {
       row-gap: 1rem;
@@ -215,43 +320,19 @@
       row-gap: 1rem;
     }
   }
-}
 
-/*
-ОСТАВИТЬ ФУТЕР НА КОНЕЦ ИЗ=ЗА ПП
-.footer {
-  &__container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(3, minmax(27px, auto));
-    gap: 2rem;
-    grid-template-areas:
-    "logo  logo      .      .      ul  ul  ul  ul  ul  ul  ul  ul"
-    "social  social    .     .     ul  ul  ul  ul  ul  ul  ul  ul"
-    "desc desc desc desc desc desc desc desc desc desc desc desc ";
+  .top {
+    &__list {
+      grid-template-rows: 332px repeat(2, 206px);
+      column-gap: 1rem;
+    }
   }
 
-  &__logo {
-    grid-area: logo;
-  }
-
-  &__list {
-    grid-area: ul;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__descr {
-    grid-area: desc;
+  .sofa {
+    &__top {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+    }
   }
 }
-
-.social {
-  grid-area: social;
-
-  &__list {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-*/
