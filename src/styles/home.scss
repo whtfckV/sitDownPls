@@ -68,11 +68,11 @@
       opacity: 1;
       transform: rotate(-90deg);
 
-      &.bullet-animate {
+      &.swiper-pagination-bullet-active {
         .bullet {
           &__progress {
             stroke-dasharray: 100 0;
-            transition: stroke-dasharray 6.5s linear;
+            transition: stroke-dasharray 6.5s linear 2s;
           }
         }
       }

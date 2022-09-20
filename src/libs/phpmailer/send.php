@@ -31,7 +31,7 @@ try {
 
   $mail->Host = 'smtp.gmail.com';
   $mail->Username = 'alexandr311003@gmail.com';
-  $mail->Password = 'argizysotoqtjgpx';
+  $mail->Password = '';
   $mail->SMTPSecure = 'ssl';
   $mail->Port = 465;
 

@@ -19,6 +19,8 @@ const heroSwiper = new Swiper('#heroSwiper', {
     },
   },
 });
+
+/*
 let bullets = document.querySelectorAll('.swiper-pagination-bullet')
 
 heroSwiper.on('slideChangeTransitionEnd', () => {
@@ -32,6 +34,7 @@ heroSwiper.on('slideChangeTransitionStart', () => {
     bullet.classList.remove('bullet-animate')
   })
 })
+*/
 
 const specialSwiper = new Swiper('#specialSwiper', {
   slidesPerView: 1,
