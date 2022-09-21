@@ -46,8 +46,7 @@ legend {
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
   margin: 0;
 }
 
@@ -180,13 +179,13 @@ button {
   &__price {
     line-height: 130%;
 
-    &_new {
+    &-new {
       margin-right: 26px;
       font-size: 18px;
       color: $secondary;
     }
 
-    &_old {
+    &-old {
       position: relative;
       font-size: 16px;
       color: $grey;

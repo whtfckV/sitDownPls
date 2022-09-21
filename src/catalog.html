@@ -23,22 +23,23 @@
 </head>
 
 <body>
+  <h1 class="hidden">каталог прямых диванов SitDownPls</h1>
   @@include('./modules/header.html')
   <div class="container">
-    <ol itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumbs-list">
-      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs-list__item">
+    <ol class="breadcrumbs-list" itemscope itemtype="http://schema.org/BreadcrumbList">
+      <li class="breadcrumbs-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
         <a itemprop="item" href="/"><span itemprop="name">Главная</span></a>
         <meta itemprop="position" content="1">
       </li>
-      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs-list__item">
+      <li class="breadcrumbs-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
         <a itemprop="item" href="/catalog/"><span itemprop="name">Каталог</span></a>
         <meta itemprop="position" content="2">
       </li>
-      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs-list__item">
+      <li class="breadcrumbs-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
         <a itemprop="item" href="/catalog/sofa/"> <span itemprop="name">Диваны</span></a>
         <meta itemprop="position" content="3">
       </li>
-      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs-list__item">
+      <li class="breadcrumbs-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
         <span itemprop="name">Прямые диваны</span>
         <meta itemprop="position" content="4">
       </li>
@@ -60,58 +61,58 @@
               <ul class="group__list drop-item">
                 <li class="group__item">
                   <label class="group__label">
-                    <input class="group__checkbox hidden" type="checkbox" name="sofa" id="sofa" checked>
+                    <input class="group__checkbox hidden" id="sofa" type="checkbox" name="sofa" checked>
                     <span class="group__checkbox-native"></span><span class="group__descr">Диваны</span>
                   </label>
                 </li>
                 <li class="group__item">
                   <label class="group__label">
-                    <input class="group__checkbox hidden" type="checkbox" name="armchair" id="armchair">
+                    <input class="group__checkbox hidden" id="armchair" type="checkbox" name="armchair">
                     <span class="group__checkbox-native"></span><span class="group__descr">Кресла</span>
                   </label>
                 </li>
                 <li class="group__item">
                   <label class="group__label">
-                    <input class="group__checkbox hidden" type="checkbox" name="pouf" id="pouf">
+                    <input class="group__checkbox hidden" id="pouf" type="checkbox" name="pouf">
                     <span class="group__checkbox-native"></span><span class="group__descr">Пуфы</span>
                   </label>
                 </li>
                 <li class="group__item">
                   <label class="group__label">
-                    <input class="group__checkbox hidden" type="checkbox" name="bed" id="bed">
+                    <input class="group__checkbox hidden" id="bed" type="checkbox" name="bed">
                     <span class="group__checkbox-native"></span><span class="group__descr">Кровати</span>
                   </label>
                 </li>
                 <li class="group__item">
                   <label class="group__label">
-                    <input class="group__checkbox hidden" type="checkbox" name="cabinet" id="cabinet">
+                    <input class="group__checkbox hidden" id="cabinet" type="checkbox" name="cabinet">
                     <span class="group__checkbox-native"></span><span class="group__descr">Тумбы</span>
                   </label>
                 </li>
                 <li class="group__item">
                   <label class="group__label">
-                    <input class="group__checkbox hidden" type="checkbox" name="dresser" id="dresser">
+                    <input class="group__checkbox hidden" id="dresser" type="checkbox" name="dresser">
                     <span class="group__checkbox-native"></span><span class="group__descr">Комоды</span>
                   </label>
                 </li>
                 <li class="group__item">
                   <label class="group__label">
-                    <input class="group__checkbox hidden" type="checkbox" name="chair" id="chair">
+                    <input class="group__checkbox hidden" id="chair" type="checkbox" name="chair">
                     <span class="group__checkbox-native"></span><span class="group__descr">Стулья</span>
                   </label>
                 </li>
                 <li class="group__item">
                   <label class="group__label">
-                    <input class="group__checkbox hidden" type="checkbox" name="table" id="table">
+                    <input class="group__checkbox hidden" id="table" type="checkbox" name="table">
                     <span class="group__checkbox-native"></span><span class="group__descr">Столы</span>
                   </label>
                 </li>
                 <li class="group__item">
                   <label class="group__label">
-                    <input class="group__checkbox hidden" type="checkbox" name="accessory" id="accessory">
+                    <input class="group__checkbox hidden" id="accessory" type="checkbox" name="accessory">
                     <span class="group__checkbox-native"></span><span class="group__descr">Аксессуары</span>
                   </label>
-                  <button type="button" class="group__btn">+ ещё 12</button>
+                  <button class="group__btn" type="button">+ ещё 12</button>
                 </li>
               </ul>
             </fieldset>
@@ -130,7 +131,7 @@
                     name="numberFieldTo" min="2000" max="150000" aria-label="Введите максимальную цену" />
                 </div>
               </div>
-              <div class="wrapper__slider"></div>
+              <div class="group__slider"></div>
             </fieldset>
             <fieldset class="filter__group group">
               <legend class="group__legend">Скидка</legend>
@@ -138,19 +139,19 @@
               <ul class="group__list drop-item">
                 <li class="group__item">
                   <label class="group__label">
-                    <input class="group__checkbox hidden" type="checkbox" name="over" id="over">
-                    <span class="group__checkbox-native"></span><span class="group__descr group__descr_mbl group__descr_more"><span class="group__descr_dsktp">Более</span> 5 000</span>
+                    <input class="group__checkbox hidden" id="over" type="checkbox" name="over">
+                    <span class="group__checkbox-native"></span><span class="group__descr group__descr_mbl group__descr_more"><span class="group__descr group__descr_dsktp">Более</span> 5 000</span>
                   </label>
                 </li>
                 <li class="group__item">
                   <label class="group__label">
-                    <input class="group__checkbox hidden" type="checkbox" name="less" id="less">
-                    <span class="group__checkbox-native"></span><span class="group__descr group__descr_mbl group__descr_less"><span class="group__descr_dsktp">Менее</span> 5 000</span>
+                    <input class="group__checkbox hidden" id="less" type="checkbox" name="less">
+                    <span class="group__checkbox-native"></span><span class="group__descr group__descr_mbl group__descr_less"><span class="group__descr group__descr_dsktp">Менее</span> 5 000</span>
                   </label>
                 </li>
                 <li class="group__item">
                   <label class="group__label">
-                    <input class="group__checkbox hidden" type="checkbox" name="noMatter" id="noMatter" checked>
+                    <input class="group__checkbox hidden" id="noMatter" type="checkbox" name="noMatter" checked>
                     <span class="group__checkbox-native"></span><span class="group__descr">Не важно</span>
                   </label>
                 </li>
@@ -162,58 +163,58 @@
               <ul class="group__list drop-item">
                 <li class="group__item">
                   <label class="group__label">
-                    <input class="group__checkbox hidden" type="checkbox" name="Brown" id="Brown">
+                    <input class="group__checkbox hidden" id="Brown" type="checkbox" name="Brown">
                     <span class="group__checkbox-native"></span><span class="group__descr">Коричневый</span>
                   </label>
                 </li>
                 <li class="group__item">
                   <label class="group__label">
-                    <input class="group__checkbox hidden" type="checkbox" name="Black" id="Black">
+                    <input class="group__checkbox hidden" id="Black" type="checkbox" name="Black">
                     <span class="group__checkbox-native"></span><span class="group__descr">Черный</span>
                   </label>
                 </li>
                 <li class="group__item">
                   <label class="group__label">
-                    <input class="group__checkbox hidden" type="checkbox" name="Beige" id="Beige">
+                    <input class="group__checkbox hidden" id="Beige" type="checkbox" name="Beige">
                     <span class="group__checkbox-native"></span><span class="group__descr">Бежевый</span>
                   </label>
                 </li>
                 <li class="group__item">
                   <label class="group__label">
-                    <input class="group__checkbox hidden" type="checkbox" name="Grey" id="Grey">
+                    <input class="group__checkbox hidden" id="Grey" type="checkbox" name="Grey">
                     <span class="group__checkbox-native"></span><span class="group__descr">Серый</span>
                   </label>
                 </li>
                 <li class="group__item">
                   <label class="group__label">
-                    <input class="group__checkbox hidden" type="checkbox" name="White" id="White">
+                    <input class="group__checkbox hidden" id="White" type="checkbox" name="White">
                     <span class="group__checkbox-native"></span><span class="group__descr">Белый</span>
                   </label>
                 </li>
                 <li class="group__item">
                   <label class="group__label">
-                    <input class="group__checkbox hidden" type="checkbox" name="Blue" id="Blue">
+                    <input class="group__checkbox hidden" id="Blue" type="checkbox" name="Blue">
                     <span class="group__checkbox-native"></span><span class="group__descr">Синий</span>
                   </label>
                 </li>
                 <li class="group__item">
                   <label class="group__label">
-                    <input class="group__checkbox hidden" type="checkbox" name="Orange" id="Orange" checked>
+                    <input class="group__checkbox hidden" id="Orange" type="checkbox" name="Orange" checked>
                     <span class="group__checkbox-native"></span><span class="group__descr">Оранжевый</span>
                   </label>
                 </li>
                 <li class="group__item">
                   <label class="group__label">
-                    <input class="group__checkbox hidden" type="checkbox" name="Yellow" id="Yellow">
+                    <input class="group__checkbox hidden" id="Yellow" type="checkbox" name="Yellow">
                     <span class="group__checkbox-native"></span><span class="group__descr">Желтый</span>
                   </label>
                 </li>
                 <li class="group__item">
                   <label class="group__label">
-                    <input class="group__checkbox hidden" type="checkbox" name="Green" id="Green">
+                    <input class="group__checkbox hidden" id="Green" type="checkbox" name="Green">
                     <span class="group__checkbox-native"></span><span class="group__descr">Зеленый</span>
                   </label>
-                  <button type="button" class="group__btn">+ ещё 7</button>
+                  <button class="group__btn" type="button">+ ещё 7</button>
                 </li>
               </ul>
             </fieldset>
@@ -223,7 +224,7 @@
           <div class="banner__content">
             <h3 class="banner__title">Оксфорд 1950</h3>
             <p class="banner__descr">Новая коллекция изысканных кресел</p>
-            <a href="#" class="link-catalog">
+            <a class="link-catalog" href="#">
               <span class="link-catalog__text">В каталог</span>
               <span class="link-catalog__icon">
                 <svg class="link-catalog__arrow arrow" width="6" height="9">
@@ -235,7 +236,7 @@
         </div>
       </div>
       <!-- Slider main container -->
-      <div id="catalogSwiper" class="swiper catalog__swiper">
+      <div class="swiper catalog__swiper" id="catalogSwiper">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper catalog__wrapper">
           <!-- Slides -->

@@ -26,7 +26,7 @@
   @@include('./modules/header.html')
   <section class="hero">
     <!-- Slider main container -->
-    <div id="heroSwiper" class="swiper hero__swiper">
+    <div class="swiper hero__swiper" id="heroSwiper">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper hero__wrapper">
         <!-- Slides -->
@@ -71,7 +71,7 @@
         </div>
       </div>
       <!-- Slider main container -->
-      <div id="specialSwiper" class="swiper">
+      <div class="swiper" id="specialSwiper">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
@@ -84,8 +84,8 @@
             <div class="card-sale__content">
               <h3 class="card-sale__title">Кресло велюровое “X-24”</h3>
               <div class="card-sale__price">
-                <span class="card-sale__price_new">15&nbsp;990 руб</span>
-                <span class="card-sale__price_old">24&nbsp;990 руб</span>
+                <span class="card-sale__price-new">15&nbsp;990 руб</span>
+                <span class="card-sale__price-old">24&nbsp;990 руб</span>
               </div>
               <button class="card-sale__btn">Купить</button>
             </div>
@@ -100,8 +100,8 @@
             <div class="card-sale__content card-sale__content_sofa">
               <h3 class="card-sale__title">Диван тканевый “Z-44”</h3>
               <div class="card-sale__price">
-                <span class="card-sale__price_new">22&nbsp;990 руб</span>
-                <span class="card-sale__price_old">32&nbsp;990 руб</span>
+                <span class="card-sale__price-new">22&nbsp;990 руб</span>
+                <span class="card-sale__price-old">32&nbsp;990 руб</span>
               </div>
               <button class="card-sale__btn">Купить</button>
             </div>
@@ -115,8 +115,8 @@
             <div class="card-sale__content">
               <h3 class="card-sale__title">Будильник “Quartz-23”</h3>
               <div class="card-sale__price">
-                <span class="card-sale__price_new">1&nbsp;290 руб</span>
-                <span class="card-sale__price_old">1&nbsp;890 руб</span>
+                <span class="card-sale__price-new">1&nbsp;290 руб</span>
+                <span class="card-sale__price-old">1&nbsp;890 руб</span>
               </div>
               <button class="card-sale__btn">Купить</button>
             </div>
@@ -130,8 +130,8 @@
             <div class="card-sale__content">
               <h3 class="card-sale__title">Мини-скульптура “Oh my deer”</h3>
               <div class="card-sale__price">
-                <span class="card-sale__price_new">690 руб</span>
-                <span class="card-sale__price_old">990 руб</span>
+                <span class="card-sale__price-new">690 руб</span>
+                <span class="card-sale__price-old">990 руб</span>
               </div>
               <button class="card-sale__btn">Купить</button>
             </div>
@@ -139,15 +139,15 @@
           <div class="swiper-slide card-sale card-sale-z-85">
             <span class="card-sale__discount">- 10 000</span>
             <picture class="card-sale__pic">
-              <source srcset="./img/z-85-1024.webp, ./img/z-85-2x-1024.webp 2x">
+              <source srcset="./img/z-85-1024.webp, ./img/z-85-2x-1024.webp 2x" media="(max-width: 1199px)">
               <source srcset="./img/z-85-2x.webp 2x">
               <img class="card-sale__img" src="./img/z-85.webp" alt="Фото товара">
             </picture>
             <div class="card-sale__content card-sale__content_sofa">
               <h3 class="card-sale__title">Диван вел-флок “Z-85”</h3>
               <div class="card-sale__price">
-                <span class="card-sale__price_new">22&nbsp;990 руб</span>
-                <span class="card-sale__price_old">32&nbsp;990 руб</span>
+                <span class="card-sale__price-new">22&nbsp;990 руб</span>
+                <span class="card-sale__price-old">32&nbsp;990 руб</span>
               </div>
               <button class="card-sale__btn">Купить</button>
             </div>
@@ -161,8 +161,8 @@
             <div class="card-sale__content">
               <h3 class="card-sale__title">Термометр + гидрометр “H-18”</h3>
               <div class="card-sale__price">
-                <span class="card-sale__price_new">1&nbsp;390 руб</span>
-                <span class="card-sale__price_old">2&nbsp;090 руб</span>
+                <span class="card-sale__price-new">1&nbsp;390 руб</span>
+                <span class="card-sale__price-old">2&nbsp;090 руб</span>
               </div>
               <button class="card-sale__btn">Купить</button>
             </div>
@@ -332,16 +332,16 @@
           </div>
         </li>
       </ul>
-      <button id="btnMore" class="high-rating__more">Смотреть больше товаров</button>
+      <button class="high-rating__more" id="btnMore">Смотреть больше товаров</button>
     </div>
   </section>
   <section class="banner">
     <div class="container banner__container">
-      <aricle class="banner__content">
+      <div class="banner__content">
         <h3 class="banner__title">Оксфорд 1950</h3>
         <p class="banner__descr">Новая коллекция изысканных кресел</p>
         <button class="banner__btn">Ознакомиться</button>
-      </aricle>
+      </div>
     </div>
   </section>
   <section class="top">
@@ -350,13 +350,13 @@
       <ul class="top__list">
         <li class="top__item top__sofa">
           <div class="top__wrap top__wrap_big">
-            <a href="./catalog.html" class="top__types_big" aria-label="прямые диваны">Прямые</a>
-            <a href="#" class="top__types_big" aria-label="угловые диваны">Угловые</a>
-            <a href="#" class="top__types_big" aria-label="модульные диваны">Модульные</a>
+            <a class="top__types top__types_big" href="./catalog.html" aria-label="прямые диваны">Прямые</a>
+            <a class="top__types top__types_big" href="#" aria-label="угловые диваны">Угловые</a>
+            <a class="top__types top__types_big" href="#" aria-label="модульные диваны">Модульные</a>
           </div>
           <div class="top__heading top__heading_big">
             <h3 class="top__title top__title_big">Диваны</h3>
-            <a href="#" class="top__link link-catalog" aria-label="в каталог диванов">
+            <a class="top__link link-catalog" href="#" aria-label="в каталог диванов">
               <span class="link-catalog__text">В каталог</span>
               <span class="link-catalog__icon">
                 <svg class="link-catalog__arrow arrow" width="6" height="9">
@@ -368,12 +368,12 @@
         </li>
         <li class="top__item top__armchair">
           <div class="top__wrap">
-            <a href="#" class="top__types" aria-label="мягкие кресла">Мягкие</a>
-            <a href="#" class="top__types" aria-label="кресла кровати">Кресла-кровати</a>
+            <a class="top__types" href="#" aria-label="мягкие кресла">Мягкие</a>
+            <a class="top__types" href="#" aria-label="кресла кровати">Кресла-кровати</a>
           </div>
           <div class="top__heading">
             <h3 class="top__title">Кресла</h3>
-            <a href="#" class="top__link link-catalog" aria-label="в каталог кресел">
+            <a class="top__link link-catalog" href="#" aria-label="в каталог кресел">
               <span class="link-catalog__text">В каталог</span>
               <span class="link-catalog__icon">
                 <svg class="link-catalog__arrow arrow" width="6" height="9">
@@ -385,12 +385,12 @@
         </li>
         <li class="top__item top__bed">
           <div class="top__wrap">
-            <a href="#" class="top__types" aria-label="односпальные кровати">Односпальные</a>
-            <a href="#" class="top__types" aria-label="двуспальные кровати">Двуспальные</a>
+            <a class="top__types" href="#" aria-label="односпальные кровати">Односпальные</a>
+            <a class="top__types" href="#" aria-label="двуспальные кровати">Двуспальные</a>
           </div>
           <div class="top__heading">
             <h3 class="top__title">Кровати</h3>
-            <a href="#" class="top__link link-catalog" aria-label="в каталог кроватей">
+            <a class="top__link link-catalog" href="#" aria-label="в каталог кроватей">
               <span class="link-catalog__text">В каталог</span>
               <span class="link-catalog__icon">
                 <svg class="link-catalog__arrow arrow" width="6" height="9">
@@ -402,12 +402,12 @@
         </li>
         <li class="top__item top__pedestal">
           <div class="top__wrap">
-            <a href="#" class="top__types">Тумбы</a>
-            <a href="#" class="top__types">Комоды</a>
+            <a class="top__types" href="#">Тумбы</a>
+            <a class="top__types" href="#">Комоды</a>
           </div>
           <div class="top__heading">
             <h3 class="top__title">Тумбы и&nbsp;комоды</h3>
-            <a href="#" class="top__link link-catalog" aria-label="в каталог тумб и комодов">
+            <a class="top__link link-catalog" href="#" aria-label="в каталог тумб и комодов">
               <span class="link-catalog__text">В каталог</span>
               <span class="link-catalog__icon">
                 <svg class="link-catalog__arrow arrow" width="6" height="9">
@@ -419,12 +419,12 @@
         </li>
         <li class="top__item top__chair">
           <div class="top__wrap">
-            <a href="#" class="top__types" aria-label="деревянные стулья">Деревянные</a>
-            <a href="#" class="top__types">Металлокаркас</a>
+            <a class="top__types" href="#" aria-label="деревянные стулья">Деревянные</a>
+            <a class="top__types" href="#">Металлокаркас</a>
           </div>
           <div class="top__heading">
             <h3 class="top__title">Стулья</h3>
-            <a href="#" class="top__link link-catalog" aria-label="в каталог стульев">
+            <a class="top__link link-catalog" href="#" aria-label="в каталог стульев">
               <span class="link-catalog__text">В каталог</span>
               <span class="link-catalog__icon">
                 <svg class="link-catalog__arrow arrow" width="6" height="9">
@@ -455,37 +455,37 @@
         </div>
       </div>
       <!-- Slider main container -->
-      <div id="usefulSwiper" class="swiper">
+      <div class="swiper" id="usefulSwiper">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper useful__wrapper">
           <!-- Slides -->
           <article class="swiper-slide useful__slide">
             <div class="useful__content">
-              <p class="useful__descr">И&nbsp;нет сомнений, что сделанные на&nbsp;базе интернет&#8209;аналитики выводы представляют собой не&nbsp;что иное?</p>
+              <h3 class="useful__title">И&nbsp;нет сомнений, что сделанные на&nbsp;базе интернет&#8209;аналитики выводы представляют собой не&nbsp;что иное?</h3>
               <button class="useful__btn-read">Читать</button>
             </div>
           </article>
           <article class="swiper-slide useful__slide">
             <div class="useful__content">
-              <p class="useful__descr">Как принято считать, некоторые особенности приносят несомненную пользу обществу?</p>
+              <h3 class="useful__title">Как принято считать, некоторые особенности приносят несомненную пользу обществу?</h3>
               <button class="useful__btn-read">Читать</button>
             </div>
           </article>
           <article class="swiper-slide useful__slide">
             <div class="useful__content">
-              <p class="useful__descr">Ясность нашей позиции очевидна: укрепление и&nbsp;развитие внутренней структуры?</p>
+              <h3 class="useful__title">Ясность нашей позиции очевидна: укрепление и&nbsp;развитие внутренней структуры?</h3>
               <button class="useful__btn-read">Читать</button>
             </div>
           </article>
           <article class="swiper-slide useful__slide">
             <div class="useful__content">
-              <p class="useful__descr">Прежде всего, консультация с&nbsp;широким активом однозначно фиксирует необходимость распределения?</p>
+              <h3 class="useful__title">Прежде всего, консультация с&nbsp;широким активом однозначно фиксирует необходимость распределения?</h3>
               <button class="useful__btn-read">Читать</button>
             </div>
           </article>
           <article class="swiper-slide useful__slide">
             <div class="useful__content">
-              <p class="useful__descr">Как принято считать, некоторые особенности приносят несомненную пользу обществу?</p>
+              <h3 class="useful__title">Как принято считать, некоторые особенности приносят несомненную пользу обществу?</h3>
               <button class="useful__btn-read">Читать</button>
             </div>
           </article>
@@ -499,16 +499,16 @@
         <h2 class="feedback__title section-title">Мы всегда вам рады!</h2>
         <p class="feedback__descr">
           Безусловно, новая модель организационной деятельности в&nbsp;значительной степени обусловливает важность распределения внутренних резервов и&nbsp;ресурсов.
-          <span tabindex="0" class="feedback__tooltip">
+          <span class="feedback__tooltip" tabindex="0">
             <svg class="feedback__question" width="12" height="12">
               <use xlink:href="./img/sprite.svg#question"></use>
             </svg>
           </span>
         </p>
         <form class="feedback__form" id="feedback" action="#" method="post">
-          <div id="modalSuccess" class="modal-success">
+          <div class="modal-success" id="modalSuccess">
             <div class="modal-success__content">
-              <button id="modalClose" class="modal-close" type="button" tabindex="1">
+              <button class="modal-close" id="modalClose" type="button" tabindex="1" aria-label="закрыть всплывающее окно">
                 <svg class="modal-close__icon" width="20" height="20">
                   <use xlink:href="./img/sprite.svg#close"></use>
                 </svg>
@@ -519,17 +519,17 @@
           <fieldset class="feedback__field">
             <legend class="hidden">Форма заказа обратного звонка</legend>
             <label class="feedback__label">
-              <input class="feedback__input" type="text" name="name" id="name" placeholder="Как вас зовут?">
+              <input class="feedback__input" id="name" type="text" name="name" placeholder="Как вас зовут?">
             </label>
             <label class="feedback__label">
-              <input class="feedback__input" type="tel" name="tel" id="tel" placeholder="Ваш телефон">
+              <input class="feedback__input" id="tel" type="tel" name="tel" placeholder="Ваш телефон">
             </label>
             <label class="feedback__label">
-              <input class="feedback__input" type="tel" name="mail" id="mail" placeholder="Ваш e-mail">
+              <input class="feedback__input" id="mail" type="tel" name="mail" placeholder="Ваш e-mail">
             </label>
             <button class="feedback__btn">Отправить</button>
             <label class="feedback__label feedback__label-checkbox">
-              <input class="feedback__checkbox hidden" type="checkbox" name="agreement" id="agreement" required>
+              <input class="feedback__checkbox hidden" id="agreement" type="checkbox" name="agreement" required>
               <span class="feedback__native-check"></span><span class="feedback__agreement">Принимаю <a class="feedback__link" href="#">пользовательское соглашение</a></span>
             </label>
           </fieldset>

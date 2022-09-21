@@ -4,7 +4,7 @@
       <fieldset class="region__field">
         <legend class="region__legend hidden">Ваш регион:</legend>
         <h4 class="region__title">Ваш регион:</h4>
-        <select name="region" id="region">
+        <select id="region" name="region">
           <option value="moscow" selected>Москва</option>
           <option value="Kazan">Казань</option>
           <option value="Ufa">Уфа</option>
@@ -26,8 +26,7 @@
     </ul>
     <a class="header__logo logo" href="#">
       <picture>
-        <source srcset="./img/logo-2x.webp 2x, ./img/logo.webp" type="image/webp">
-        <source srcset="./img/logo-2x.png 2x" type="image/png">
+        <source srcset="./img/logo-2x.webp 2x, ./img/logo.webp">
         <img class="logo__img" src="./img/logo.webp" alt="логотип компании sitdownpls">
       </picture>
     </a>
@@ -48,7 +47,7 @@
       <fieldset class="search__field">
         <legend class="search__legend hidden">поиск по сайту</legend>
         <div class="search__wrap">
-          <input class="search__input" type="text" name="search" id="search" placeholder="Я хочу купить...">
+          <input class="search__input" id="search" type="text" name="search" placeholder="Я хочу купить...">
           <span class="search__icon"></span>
           <button class="search__submit" type="submit" aria-label="поиск">
             <svg class="search__arrow arrow" width="7" height="12">
@@ -56,7 +55,7 @@
             </svg>
           </button>
         </div>
-        <select name="category" id="category">
+        <select id="category" name="category">
           <option placeholder>Категория</option>
           <option value="sofas">Диваны</option>
           <option value="armchairs">Кресла</option>

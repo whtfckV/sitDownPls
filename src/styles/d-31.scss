@@ -37,7 +37,7 @@
         width: auto;
       }
 
-      &__btn {
+      &-btn {
         position: absolute;
         bottom: calc(67px - 1rem);
         display: none;
@@ -184,9 +184,9 @@
       }
     }
 
-    &__close {
-      z-index: 20;
-    }
+  }
+  &__modal-close {
+    z-index: 20;
   }
 }
 
@@ -417,7 +417,7 @@
       &-modal {
         margin: 0 66px;
 
-        &__btn {
+        &-btn {
           display: block;
         }
       }

@@ -1,4 +1,4 @@
-const rangeSlider = document.querySelector(".wrapper__slider");
+const rangeSlider = document.querySelector(".group__slider");
 const fieldNumberFirst = document.querySelector(".range-wrapper__field_first");
 const fieldNumberSecond = document.querySelector(".range-wrapper__field_second");
 const allFields = [fieldNumberFirst, fieldNumberSecond];

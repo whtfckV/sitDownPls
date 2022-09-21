@@ -19,41 +19,41 @@
   <script defer src="js/d-31.js"></script>
 </head>
 
-<body>
+<body><h1 class="hidden">Диван тканевый прямой “D-31”</h1>
   @@include('./modules/header.html')
   <div class="container">
-    <ol itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumbs-list">
-      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs-list__item">
+    <ol class="breadcrumbs-list" itemscope itemtype="http://schema.org/BreadcrumbList">
+      <li class="breadcrumbs-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
         <a itemprop="item" href="/"><span itemprop="name">Главная</span></a>
         <meta itemprop="position" content="1">
       </li>
-      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs-list__item">
+      <li class="breadcrumbs-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
         <a itemprop="item" href="/catalog/"><span itemprop="name">Каталог</span></a>
         <meta itemprop="position" content="2">
       </li>
-      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs-list__item">
+      <li class="breadcrumbs-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
         <a itemprop="item" href="/catalog/sofa/"> <span itemprop="name">Диваны</span></a>
         <meta itemprop="position" content="3">
       </li>
-      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs-list__item">
+      <li class="breadcrumbs-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
         <a itemprop="item" href="/catalog.html"> <span itemprop="name">Прямые диваны</span></a>
         <meta itemprop="position" content="4">
       </li>
-      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs-list__item">
+      <li class="breadcrumbs-list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
         <span itemprop="name">D-31</span>
         <meta itemprop="position" content="4">
       </li>
     </ol>
   </div>
-  <div id="sofaModal" class="sofa-modal">
+  <div class="sofa-modal" id="sofaModal">
     <div class="container sofa-modal__container">
       <div class="sofa-modal__content">
-        <button id="sofaModalClose" class="modal-close sofa-modal__close" type="button" tabindex="1">
+        <button class="modal-close sofa-modal__close" id="sofaModalClose" type="button" tabindex="1" aria-label="закрыть всплывающее окно">
           <svg class="modal-close__icon sofa-modal__close-icon" width="20" height="20">
             <use xlink:href="./img/sprite.svg#close"></use>
           </svg>
         </button>
-        <div id="sofaSwiperTopModal" class="swiper swiper-top-modal">
+        <div class="swiper swiper-top-modal" id="sofaSwiperTopModal">
           <div class="swiper-wrapper">
             <div class="swiper-slide swiper-top-modal__slide">
               <picture>
@@ -92,17 +92,17 @@
             </div>
           </div>
         </div>
-        <button class="swiper-bottom-modal__btn swiper-bottom-modal__btn-prev">
-          <svg class="swiper-bottom-modal__arrow arrow" width="7" height="12">
+        <button class="swiper-bottom-modal-btn swiper-bottom-modal-btn-prev">
+          <svg class="swiper-bottom-modal-arrow arrow" width="7" height="12">
             <use xlink:href="./img/sprite.svg#search-arrow"></use>
           </svg>
         </button>
-        <button class="swiper-bottom-modal__btn swiper-bottom-modal__btn-next">
-          <svg class="swiper-bottom-modal__arrow arrow" width="7" height="12">
+        <button class="swiper-bottom-modal-btn swiper-bottom-modal-btn-next">
+          <svg class="swiper-bottom-modal-arrow arrow" width="7" height="12">
             <use xlink:href="./img/sprite.svg#search-arrow"></use>
           </svg>
         </button>
-        <div id="sofaSwiperBottomModal" class="swiper swiper-bottom-modal">
+        <div class="swiper swiper-bottom-modal" id="sofaSwiperBottomModal">
           <div class="swiper-wrapper swiper-bottom-modal__wrapper">
             <div class="swiper-slide swiper-bottom-modal__slide">
               <picture class="swiper-bottom__pic">
@@ -133,9 +133,9 @@
       </div>
     </div>
   </div>
-  <div id="modalSuccess" class="modal-success">
+  <div class="modal-success" id="modalSuccess">
     <div class="modal-success__content">
-      <button id="modalClose" class="modal-close" type="button" tabindex="1">
+      <button class="modal-close" id="modalClose" type="button" tabindex="1" aria-label="закрфть всплывающее окно">
         <svg class="modal-close__icon" width="20" height="20">
           <use xlink:href="./img/sprite.svg#close"></use>
         </svg>
@@ -146,7 +146,7 @@
   <section class="sofa">
     <div class="container sofa__container">
       <div class="sofa__top">
-        <div id="sofaSwiperTop" class="swiper swiper-top">
+        <div class="swiper swiper-top" id="sofaSwiperTop">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <picture>
@@ -180,7 +180,7 @@
             </div>
           </div>
         </div>
-        <div id="sofaSwiperBottom" class="swiper swiper-bottom">
+        <div class="swiper swiper-bottom" id="sofaSwiperBottom">
           <div class="swiper-wrapper swiper-bottom__wrapper">
             <div class="swiper-slide swiper-bottom__slide">
               <picture class="swiper-bottom__pic">
@@ -214,11 +214,11 @@
           <p class="sofa__descr">Мини 120 см без ящика Stark синий (Рогожка)</p>
           <p class="sofa__price">28 490 руб</p>
           <div class="sofa__wrap">
-            <button id="buy" class="sofa__btn">Купить в один клик</button>
-            <div id="buyModal" class="buy-modal">
+            <button class="sofa__btn" id="buy">Купить в один клик</button>
+            <div class="buy-modal" id="buyModal">
               <div class="buy-modal__wrap">
-                <button id="buyModalClose" class="modal-close sofa-modal__close" type="button" tabindex="1">
-                  <svg class="modal-close__icon sofa-modal__close-icon" width="20" height="20">
+                <button class="modal-close sofa__modal-close" id="buyModalClose" type="button" tabindex="1" aria-label="закрыть всплывающее окно">
+                  <svg class="modal-close__icon sofa__modal-close-icon" width="20" height="20">
                     <use xlink:href="./img/sprite.svg#close"></use>
                   </svg>
                 </button>
@@ -228,14 +228,14 @@
                   <fieldset class="buy-modal__field">
                     <legend class="hidden">Форма заказа обратного звонка</legend>
                     <label class="buy-modal__label">
-                      <input class="buy-modal__input" type="text" name="name" id="name" placeholder="Как вас зовут?">
+                      <input class="buy-modal__input" id="name" type="text" name="name" placeholder="Как вас зовут?">
                     </label>
                     <label class="buy-modal__label">
-                      <input class="buy-modal__input" type="tel" name="tel" id="tel" placeholder="Ваш телефон">
+                      <input class="buy-modal__input" id="tel" type="tel" name="tel" placeholder="Ваш телефон">
                     </label>
                     <button class="buy-modal__btn">Отправить</button>
                     <label class="buy-modal__label buy-modal__label-checkbox">
-                      <input class="buy-modal__checkbox hidden" type="checkbox" name="agreement" id="agreement" required>
+                      <input class="buy-modal__checkbox hidden" id="agreement" type="checkbox" name="agreement" required>
                       <span class="buy-modal__native-check"></span><span class="buy-modal__agreement">Принимаю <a class="buy-modal__link" href="#">пользовательское соглашение</a></span>
                     </label>
                   </fieldset>
@@ -334,7 +334,7 @@
           </button>
         </div>
       </div>
-      <div id="similarSwiper" class="swiper">
+      <div class="swiper" id="similarSwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide similar__slide card">
             <span class="card__star">4,5</span>

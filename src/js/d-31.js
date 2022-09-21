@@ -53,8 +53,8 @@ const sofaSwiperBottomModal = new Swiper('#sofaSwiperBottomModal', {
   slidesPerGroup: 1,
   spaceBetween: 78,
   navigation: {
-    nextEl: '.swiper-bottom-modal__btn-next',
-    prevEl: '.swiper-bottom-modal__btn-prev',
+    nextEl: '.swiper-bottom-modal-btn-next',
+    prevEl: '.swiper-bottom-modal-btn-prev',
   },
   breakpoints: {
     576: {
