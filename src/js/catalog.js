@@ -33,12 +33,12 @@ if (rangeSlider) {
 
 const catalogSwiper = new Swiper('#catalogSwiper', {
   slidesPerView: 2,
+  slidesPerGroup: 2,
+  spaceBetween: 16,
   grid: {
     rows: 3,
     fill: 'row'
   },
-  slidesPerGroup: 2,
-  spaceBetween: 16,
   pagination: {
     el: ".catalog__pagination",
     clickable: true,
@@ -47,6 +47,9 @@ const catalogSwiper = new Swiper('#catalogSwiper', {
     },
   },
   breakpoints: {
+    576: {
+      spaceBetween: 32
+    },
     851: {
       slidesPerView: 3,
       slidesPerGroup: 3,

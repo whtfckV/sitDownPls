@@ -15,8 +15,6 @@
   &__phone {
     display: flex;
     flex-direction: row-reverse;
-    column-gap: 3.5px;
-    margin-right: 3.4rem;
   }
 
   &__tel {
@@ -40,6 +38,7 @@
     }
 
     &-icon {
+      margin-right: 3.5px;
       color: $secondary;
       transition: color .3s ease;
     }
@@ -122,6 +121,10 @@
     }
   }
 
+  &__cabinet {
+    margin-right: 43px;
+  }
+
   &__basket {
     width: 30px;
 
@@ -165,9 +168,12 @@
 
   &__field {
     align-items: center;
+    margin-right: 30px;
   }
 
   &__title {
+    margin: 0;
+    margin-right: 3px;
     font-weight: 400;
     color: $black;
   }
@@ -310,9 +316,14 @@
 .info {
   @include minGrayFont;
 
-  text-decoration: none;
-  align-items: center;
   padding-left: 1.4rem;
+  text-decoration: none;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
 
   &__link {
     @include UINavLink;
@@ -323,6 +334,12 @@
   &__list {
     line-height: 1.375rem;
     color: $black;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
   }
 
   &__link {
@@ -480,6 +497,7 @@
     position: relative;
     order: -1;
     margin-left: .1rem;
+    margin-right: .7rem;
     border: 2px solid $grey;
     border-radius: 50%;
     height: 15px;
@@ -557,12 +575,10 @@
         padding: 0;
         font-size: 1rem;
         line-height: 130%;
+        margin-bottom: 11px;
 
-        &:not(.choices__placeholder) {
-          display: inline-block;
-        }
-        &:not(:nth-child(6n)) {
-          margin-bottom: 11px;
+        &--disabled {
+          display: none;
         }
       }
 
@@ -680,6 +696,10 @@
     }
 
     &__item {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+
       &:not(:nth-child(3n)) {
         margin-bottom: 40px;
       }
@@ -746,6 +766,11 @@
       height: 1px;
       background-color: $grey_light;
     }
+
+    &__field {
+      margin-right: 0;
+      margin-bottom: 1.2rem;
+    }
   }
 
   .toggle {
@@ -760,12 +785,16 @@
     &__list {
       padding-right: 0;
       flex-wrap: nowrap;
-      row-gap: 41px;
+      // row-gap: 41px;
     }
 
     &__item {
       &:not(:nth-child(3n)) {
         margin-bottom: 0;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 41px;
       }
     }
   }
@@ -794,13 +823,20 @@
       pointer-events: all;
       transition-delay: .3s;
     }
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
   }
 
   .search {
     &__wrap {
-      width: 100%;
+      margin-bottom: 1rem;
       padding: 0 2rem 0 2.13rem;
       border-radius: 10px;
+      width: 100%;
       min-height: 60px;
     }
 

@@ -66,7 +66,10 @@
   &__container {
     display: flex;
     flex-direction: column;
-    row-gap: 2.1rem;
+  }
+
+  &__top {
+    margin-bottom: 2.1rem;
   }
 
   &__content {
@@ -88,6 +91,7 @@
   }
 
   &__name {
+    margin: 0;
     margin-bottom: 3px;
     font-weight: 400;
     font-size: 24px;
@@ -115,11 +119,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 12px;
   }
 
   &__btn {
-    @include btnOpaque(600, 17px, 33.5px)
+    @include btnOpaque(600, 17px, 33.5px);
+
+    margin-bottom: 12px;
   }
 
   &__add {
@@ -132,10 +137,10 @@
   &__bottom {
     display: flex;
     justify-content: space-between;
-    column-gap: 2rem;
   }
 
   &__mechanism {
+    margin-right: 2rem;
     width: 100%;
   }
 
@@ -166,7 +171,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      row-gap: 50px;
       border-radius: 10px;
       max-width: 100%;
       height: 684px;
@@ -193,7 +197,6 @@
 .mechanism {
   $width: 247px;
   position: relative;
-  padding-bottom: 217px;
 
   &::after {
     content: '';
@@ -216,6 +219,7 @@
   }
 
   &__title {
+    margin: 0;
     margin-bottom: .5rem;
     font-weight: 600;
     font-size: 16px;
@@ -239,21 +243,24 @@
 .characteristics {
   display: flex;
   flex-direction: column;
-  row-gap: 2px;
   width: 100%;
   overflow: hidden;
 
   &__spec {
     display: flex;
     justify-content: flex-start;
-    column-gap: 4px;
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
     color: $black;
+
+    &:not(:last-child) {
+      margin-bottom: 1.5px;
+    }
   }
 
   &__title {
+    margin-right: 4px;
     color: $grey;
     width: 52%;
     overflow: hidden;
@@ -279,6 +286,7 @@
   }
 
   &__title {
+    margin: 0;
     font-weight: 400;
     font-size: 24px;
     line-height: 130%;
@@ -459,11 +467,19 @@
       background-image: url('../img/mechanism-bg-2-1024.webp');
       left: calc(243px + 28px);
     }
+
+    &__title {
+      margin-bottom: 0.4rem;
+    }
   }
 
   .characteristics {
     &__spec {
-    line-height: 147%;
+      line-height: 147%;
+
+      &:not(:last-child) {
+        margin-bottom: 2px;
+      }
     }
 
     &__title {
@@ -502,6 +518,7 @@
     }
 
     &__mechanism {
+      margin-right: 0;
       margin-bottom: 35px;
       width: 85%;
     }
@@ -518,7 +535,7 @@
   }
 
   .mechanism {
-    padding-bottom: 139px;
+    padding-bottom: 140px;
   }
 
   .characteristics {
@@ -535,6 +552,8 @@
 
   .swiper {
     &-top {
+      margin-bottom: .9rem;
+
       &-modal {
         padding-top: 2rem;
 
@@ -545,6 +564,7 @@
     }
 
     &-bottom {
+      margin-bottom: .9rem;
       padding: 8px 10px;
 
       &-modal {
@@ -556,7 +576,7 @@
           max-height: 86px;
         }
 
-        &__btn {
+        &-btn {
           bottom: calc(43px - 1rem);
         }
       }
@@ -565,6 +585,11 @@
 
   .sofa {
     padding-bottom: var(--sectionOffset);
+
+    &__top {
+      margin-bottom: 2rem;
+    }
+
     &__content {
       align-self: start;
       width: 100%;
@@ -600,7 +625,7 @@
     }
 
     &__mechanism {
-      margin-bottom: 33px;
+      margin-bottom: 36px;
       width: 100%;
     }
 
@@ -638,10 +663,11 @@
   }
 
   .characteristics {
-    row-gap: 6.3px;
-
     &__spec {
       flex-direction: column;
+      &:not(:last-child) {
+        margin-bottom: 6.3px;
+      }
     }
 
     &__title {

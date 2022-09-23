@@ -28,6 +28,7 @@
   }
 
   &__title {
+    margin: 0;
     max-width: 40%;
     font-weight: 700;
     font-size: 3rem;
@@ -157,6 +158,7 @@
   }
 
   &__title {
+    margin: 0;
     font-family: 'PlayfairDisplay', 'Times New Roman', Times, serif;
     font-size: 60px;
     line-height: 110%;
@@ -193,10 +195,15 @@
   &__wrap {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 30px;
     margin-bottom: 14px;
 
     @include minGrayFont;
+  }
+
+  &__types {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 
   &__heading {
@@ -206,6 +213,7 @@
   }
 
   &__title {
+    margin: 0;
     font-weight: 400;
     font-size: 24px;
     line-height: 33px;
@@ -770,20 +778,32 @@
     }
 
     &__wrap {
-      column-gap: 20px;
+      // column-gap: 20px;
+      flex-direction: column;
       margin-bottom: 4px;
       max-width: 80px;
 
       &_big {
+        flex-direction: row;
         margin-bottom: 14px;
         max-width: none;
+
       }
     }
+
     &__types {
       font-size: 10px;
 
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+
       &_big {
         font-size: 14px;
+
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
       }
     }
 

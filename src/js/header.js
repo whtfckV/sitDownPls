@@ -25,7 +25,7 @@ const category = new Choices(document.querySelector('#category'), {
     containerOuter: 'choices search__choices',
     containerInner: 'choices__inner search__inner',
     listSingle: 'choices__list--single search__list--single',
-  }
+  },
 });
 
 // UI поиска

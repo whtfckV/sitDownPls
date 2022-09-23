@@ -22,7 +22,11 @@
   &__wrap {
     display: flex;
     flex-direction: column;
-    row-gap: 1.9rem;
+    margin-right: 1rem;
+  }
+
+  &__logo {
+    margin-bottom: 1.9rem;
   }
 
   &__list {
@@ -32,7 +36,14 @@
     width: 65.9%;
   }
 
+  &__item {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
   &__title {
+    margin: 0;
     margin-bottom: 4px;
     font-weight: 400;
     font-size: 16px;
@@ -62,7 +73,12 @@
 .social {
   &__list {
     display: flex;
-    column-gap: 20px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
   }
 
   &__link {
@@ -129,15 +145,21 @@
   .footer {
     &__container {
       flex-direction: column;
-      row-gap: 1.3rem;
     }
 
     &__wrap {
       flex-direction: row;
       justify-content: space-between;
+      margin-bottom: 1.3rem;
+      margin-right: 0;
+    }
+
+    &__logo {
+      margin-bottom: 0;
     }
 
     &__list {
+      padding-top: 6px;
       width: 100%;
     }
   }
@@ -164,6 +186,10 @@
 
     &__item {
       width: 47%;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
     }
   }
 }

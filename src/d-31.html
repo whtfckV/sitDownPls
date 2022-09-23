@@ -48,7 +48,7 @@
   <div class="sofa-modal" id="sofaModal">
     <div class="container sofa-modal__container">
       <div class="sofa-modal__content">
-        <button class="modal-close sofa-modal__close" id="sofaModalClose" type="button" tabindex="1" aria-label="закрыть всплывающее окно">
+        <button class="btn modal-close sofa-modal__close" id="sofaModalClose" type="button" tabindex="1" aria-label="закрыть всплывающее окно">
           <svg class="modal-close__icon sofa-modal__close-icon" width="20" height="20">
             <use xlink:href="./img/sprite.svg#close"></use>
           </svg>
@@ -92,12 +92,12 @@
             </div>
           </div>
         </div>
-        <button class="swiper-bottom-modal-btn swiper-bottom-modal-btn-prev">
+        <button class="btn swiper-bottom-modal-btn swiper-bottom-modal-btn-prev">
           <svg class="swiper-bottom-modal-arrow arrow" width="7" height="12">
             <use xlink:href="./img/sprite.svg#search-arrow"></use>
           </svg>
         </button>
-        <button class="swiper-bottom-modal-btn swiper-bottom-modal-btn-next">
+        <button class="btn swiper-bottom-modal-btn swiper-bottom-modal-btn-next">
           <svg class="swiper-bottom-modal-arrow arrow" width="7" height="12">
             <use xlink:href="./img/sprite.svg#search-arrow"></use>
           </svg>
@@ -135,7 +135,7 @@
   </div>
   <div class="modal-success" id="modalSuccess">
     <div class="modal-success__content">
-      <button class="modal-close" id="modalClose" type="button" tabindex="1" aria-label="закрфть всплывающее окно">
+      <button class="btn modal-close" id="modalClose" type="button" tabindex="1" aria-label="закрфть всплывающее окно">
         <svg class="modal-close__icon" width="20" height="20">
           <use xlink:href="./img/sprite.svg#close"></use>
         </svg>
@@ -214,10 +214,10 @@
           <p class="sofa__descr">Мини 120 см без ящика Stark синий (Рогожка)</p>
           <p class="sofa__price">28 490 руб</p>
           <div class="sofa__wrap">
-            <button class="sofa__btn" id="buy">Купить в один клик</button>
+            <button class="btn sofa__btn" id="buy">Купить в один клик</button>
             <div class="buy-modal" id="buyModal">
               <div class="buy-modal__wrap">
-                <button class="modal-close sofa__modal-close" id="buyModalClose" type="button" tabindex="1" aria-label="закрыть всплывающее окно">
+                <button class="btn modal-close sofa__modal-close" id="buyModalClose" type="button" tabindex="1" aria-label="закрыть всплывающее окно">
                   <svg class="modal-close__icon sofa__modal-close-icon" width="20" height="20">
                     <use xlink:href="./img/sprite.svg#close"></use>
                   </svg>
@@ -225,7 +225,7 @@
                 <h2 class="buy-modal__title section-title">Купить в один клик</h2>
                 <p class="buy-modal__descr">Чтобы оформить заказ — заполните формы ниже и наш менеджер свяжется с вами в течении часа.</p>
                 <form class="buy-modal__form" id="buyForm" action="#" method="post">
-                  <fieldset class="buy-modal__field">
+                  <fieldset class="fieldset buy-modal__field">
                     <legend class="hidden">Форма заказа обратного звонка</legend>
                     <label class="buy-modal__label">
                       <input class="buy-modal__input" id="name" type="text" name="name" placeholder="Как вас зовут?">
@@ -233,7 +233,7 @@
                     <label class="buy-modal__label">
                       <input class="buy-modal__input" id="tel" type="tel" name="tel" placeholder="Ваш телефон">
                     </label>
-                    <button class="buy-modal__btn">Отправить</button>
+                    <button class="btn buy-modal__btn">Отправить</button>
                     <label class="buy-modal__label buy-modal__label-checkbox">
                       <input class="buy-modal__checkbox hidden" id="agreement" type="checkbox" name="agreement" required>
                       <span class="buy-modal__native-check"></span><span class="buy-modal__agreement">Принимаю <a class="buy-modal__link" href="#">пользовательское соглашение</a></span>
@@ -242,7 +242,7 @@
                 </form>
               </div>
             </div>
-            <button class="sofa__add">+ Добавить в корзину</button>
+            <button class="btn sofa__add">+ Добавить в корзину</button>
           </div>
         </div>
       </div>
@@ -322,12 +322,12 @@
       <div class="similar__wrap">
         <h2 class="similar__title">Похожие товары</h2>
         <div class="similar__nav">
-          <button class="similar__btn similar__btn-prev">
+          <button class="btn similar__btn similar__btn-prev">
             <svg class="similar__arrow arrow" width="7" height="12">
               <use xlink:href="./img/sprite.svg#search-arrow"></use>
             </svg>
           </button>
-          <button class="similar__btn similar__btn-next">
+          <button class="btn similar__btn similar__btn-next">
             <svg class="similar__arrow arrow" width="7" height="12">
               <use xlink:href="./img/sprite.svg#search-arrow"></use>
             </svg>
@@ -346,7 +346,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван велюровый “R&#8209;85”</h3>
               <span class="card__price">34&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
           <div class="swiper-slide similar__slide card">
@@ -359,7 +359,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван флоковый “H&#8209;58”</h3>
               <span class="card__price">23&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
           <div class="swiper-slide similar__slide card">
@@ -372,7 +372,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван велюровый “S&#8209;44”</h3>
               <span class="card__price">19&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
           <div class="swiper-slide similar__slide card">
@@ -385,7 +385,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван шиниловый “V&#8209;43”</h3>
               <span class="card__price">19&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
           <div class="swiper-slide similar__slide card">
@@ -398,7 +398,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван велюровый “R&#8209;85”</h3>
               <span class="card__price">34&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
           <div class="swiper-slide similar__slide card">
@@ -411,7 +411,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван флоковый “H&#8209;58”</h3>
               <span class="card__price">23&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
           <div class="swiper-slide similar__slide card">
@@ -424,7 +424,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван велюровый “S&#8209;44”</h3>
               <span class="card__price">19&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
           <div class="swiper-slide similar__slide card">
@@ -437,7 +437,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван шиниловый “V&#8209;43”</h3>
               <span class="card__price">19&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
         </div>

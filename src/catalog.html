@@ -50,15 +50,15 @@
       <div class="left">
         <h2 class="catalog__title">Каталог</h2>
         <form class="filter" action="#" method="post">
-          <fieldset class="filter__field">
-            <legend class="filter__legend">
+          <fieldset class="fieldset filter__field">
+            <legend class="legend filter__legend">
               <span class="filter__legend-dsktp">Фильтровать по:</span>
             </legend>
             <span class="filter__legend-mbl">Фильтры:</span>
-            <fieldset class="filter__group group">
-              <legend class="group__legend">Категория</legend>
-              <button class="group__drop" type="button" aria-expanded="false" aria-label="открыть список">Категория</button>
-              <ul class="group__list drop-item">
+            <fieldset class="fieldset filter__group group">
+              <legend class="legend group__legend">Категория</legend>
+              <button class="btn group__drop" type="button" aria-expanded="false" aria-label="открыть список">Категория</button>
+              <ul class="list-reset group__list drop-item">
                 <li class="group__item">
                   <label class="group__label">
                     <input class="group__checkbox hidden" id="sofa" type="checkbox" name="sofa" checked>
@@ -112,13 +112,13 @@
                     <input class="group__checkbox hidden" id="accessory" type="checkbox" name="accessory">
                     <span class="group__checkbox-native"></span><span class="group__descr">Аксессуары</span>
                   </label>
-                  <button class="group__btn" type="button">+ ещё 12</button>
+                  <button class="btn group__btn" type="button">+ ещё 12</button>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter__group group">
-              <legend class="group__legend group__legend_price">Цена</legend>
-              <button class="group__drop" type="button" aria-expanded="false" aria-label="открыть список">Цена</button>
+            <fieldset class="fieldset filter__group group">
+              <legend class="legend group__legend group__legend_price">Цена</legend>
+              <button class="btn group__drop" type="button" aria-expanded="false" aria-label="открыть список">Цена</button>
               <div class="range-wrapper group__range drop-item">
                 <div class="range-wrapper__inner range-wrapper__inner_from">
                   <label class="range-wrapper__text" for="field-from">от</label>
@@ -133,10 +133,10 @@
               </div>
               <div class="group__slider"></div>
             </fieldset>
-            <fieldset class="filter__group group">
-              <legend class="group__legend">Скидка</legend>
-              <button class="group__drop" type="button" aria-expanded="false" aria-label="открыть список">Скидка</button>
-              <ul class="group__list drop-item">
+            <fieldset class="fieldset filter__group group">
+              <legend class="legend group__legend">Скидка</legend>
+              <button class="btn group__drop" type="button" aria-expanded="false" aria-label="открыть список">Скидка</button>
+              <ul class="list-reset group__list drop-item">
                 <li class="group__item">
                   <label class="group__label">
                     <input class="group__checkbox hidden" id="over" type="checkbox" name="over">
@@ -157,10 +157,10 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter__group group">
-              <legend class="group__legend">Цвет</legend>
-              <button class="group__drop" type="button" aria-expanded="false">Цвет</button>
-              <ul class="group__list drop-item">
+            <fieldset class="fieldset filter__group group">
+              <legend class="legend group__legend">Цвет</legend>
+              <button class="btn group__drop" type="button" aria-expanded="false">Цвет</button>
+              <ul class="list-reset group__list drop-item">
                 <li class="group__item">
                   <label class="group__label">
                     <input class="group__checkbox hidden" id="Brown" type="checkbox" name="Brown">
@@ -214,7 +214,7 @@
                     <input class="group__checkbox hidden" id="Green" type="checkbox" name="Green">
                     <span class="group__checkbox-native"></span><span class="group__descr">Зеленый</span>
                   </label>
-                  <button class="group__btn" type="button">+ ещё 7</button>
+                  <button class="btn group__btn" type="button">+ ещё 7</button>
                 </li>
               </ul>
             </fieldset>
@@ -250,7 +250,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван кожаный “R&#8209;94”</h3>
               <span class="card__price">94&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
           <div class="swiper-slide catalog__slide card">
@@ -263,7 +263,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван апартековый “T&#8209;75”</h3>
               <span class="card__price">69&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
           <div class="swiper-slide catalog__slide card">
@@ -289,7 +289,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван велюровый “Y&#8209;68”</h3>
               <span class="card__price">22&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
           <div class="swiper-slide catalog__slide card">
@@ -302,7 +302,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван из&nbsp;шинила “W&#8209;95”</h3>
               <span class="card__price">22&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
           <div class="swiper-slide catalog__slide card">
@@ -315,7 +315,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван флоковый “G&#8209;41”</h3>
               <span class="card__price">17&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
           <div class="swiper-slide catalog__slide card">
@@ -328,7 +328,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван шиниловый “V&#8209;43”</h3>
               <span class="card__price">19&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
           <div class="swiper-slide catalog__slide card">
@@ -341,7 +341,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван велюровый “S&#8209;99”</h3>
               <span class="card__price">19&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
           <div class="swiper-slide catalog__slide card">
@@ -354,7 +354,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван из&nbsp;кожзама “F&#8209;85”</h3>
               <span class="card__price">26&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
           <div class="swiper-slide catalog__slide card">
@@ -367,7 +367,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван флоковый “H&#8209;64”</h3>
               <span class="card__price">25&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
           <div class="swiper-slide catalog__slide card">
@@ -380,7 +380,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван флоковый “H&#8209;58”</h3>
               <span class="card__price">23&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
           <div class="swiper-slide catalog__slide card">
@@ -393,7 +393,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван из&nbsp;кожзама “R&#8209;43”</h3>
               <span class="card__price">33&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
           <div class="swiper-slide catalog__slide card">
@@ -406,7 +406,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван из&nbsp;шинила “С&#8209;42”</h3>
               <span class="card__price">18&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
           <div class="swiper-slide catalog__slide card">
@@ -419,7 +419,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван велюровый “U&#8209;58”</h3>
               <span class="card__price">21&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
           <div class="swiper-slide catalog__slide card">
@@ -432,7 +432,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван флоковый “F&#8209;41”</h3>
               <span class="card__price">17&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
           <div class="swiper-slide catalog__slide card">
@@ -445,7 +445,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван велюровый “R&#8209;85”</h3>
               <span class="card__price">34&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
           <div class="swiper-slide catalog__slide card">
@@ -458,7 +458,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван велюровый “S&#8209;44”</h3>
               <span class="card__price">19&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
           <div class="swiper-slide catalog__slide card">
@@ -471,7 +471,7 @@
             <div class="card__content">
               <h3 class="card__title">Диван из&nbsp;шинила “C&#8209;80”</h3>
               <span class="card__price">20&nbsp;990 руб</span>
-              <button class="card__btn">Купить</button>
+              <button class="btn card__btn">Купить</button>
             </div>
           </div>
         </div>
